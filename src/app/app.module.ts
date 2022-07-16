@@ -20,6 +20,7 @@ import { ChartsModule } from '@rinminase/ng-charts';
 import { BuscarPipe } from './pipes/buscar.pipe';
 import { BuscarClientePipe } from './pipes/buscarCliente.pipe';
 import { FooterComponent } from './components/footer/footer.component';
+import { DashboardGasolinerasComponent } from './components/dashboard-gasolineras/dashboard-gasolineras.component';
 
 
 @NgModule({
@@ -36,6 +37,7 @@ import { FooterComponent } from './components/footer/footer.component';
     PerfilClienteComponent,
     FooterComponent,
     AdministracionUsuariosComponent,
+    DashboardGasolinerasComponent,
   ],
   imports: [
     BrowserModule,

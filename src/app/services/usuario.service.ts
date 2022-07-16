@@ -13,7 +13,7 @@ export class UsuarioService {
     'Authorization': this.obtenerToken()
   })
 
-  public url: String = 'https://controlhoteles-grupo7.herokuapp.com/api';
+  public url: String = 'http://localhost:8080/api';
   public headersVariable = new HttpHeaders().set('Content-Type', 'application/json');
   public identidad;
   public token;
