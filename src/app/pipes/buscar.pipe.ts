@@ -5,13 +5,13 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class BuscarPipe implements PipeTransform {
 
-  transform(hotel:any, buscar:any) {
+  transform(gasolineras:any, buscar:any) {
     if(buscar == undefined){
-      return hotel;
+      return gasolineras;
     }else{
-      return hotel.filter(hotel =>{
-        return hotel.nombreHotel.toLowerCase().includes(buscar.toLowerCase()) || hotel.direccion.toLowerCase().includes(buscar.toLowerCase()) ||
-        hotel.pais.toLowerCase().includes(buscar.toLowerCase())
+      return gasolineras.filter(gasolineras =>{
+        return gasolineras.nombreGas.toLowerCase().includes(buscar.toLowerCase()) || gasolineras.direccion.toLowerCase().includes(buscar.toLowerCase()) ||
+        gasolineras.departamento.toLowerCase().includes(buscar.toLowerCase()) 
       })
     }
   }

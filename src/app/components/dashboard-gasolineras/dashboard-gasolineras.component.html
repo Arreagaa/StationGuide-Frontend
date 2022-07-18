@@ -140,7 +140,7 @@
     <div class="container">
       <div class="input-group">
         <div class="search-wrapper">
-          <input class="search-input" type="text" placeholder="Buscar">
+          <input [(ngModel)]="buscar" type="Buscar" class="search-input" type="text" placeholder="Buscar">
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="25" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="feather feather-search" viewBox="0 0 24 24">
             <defs></defs>
             <circle cx="11" cy="11" r="8"></circle>
@@ -151,25 +151,26 @@
     </div>
   </section>
 
-  <!--<section class="services section-bg">
-  <div class="container">
+  <section class="services section-bg">
+  <div class="container" style="flex-wrap: wrap;">
   <div class="row">
-    <div class="card mb-3 text-center" style="max-height: 300px" *ngFor="let hotel of hotelModelGet | buscar:buscar" >
+    <div class="card mb-3 text-center" style="max-height: 300px" *ngFor="let gasolinera of gasolinerasModelGet | buscar:buscar" >
       <div class="row g-0">
         <div class="col-md-4">
-          <img ngClass="imagen-card" src="https://live.staticflickr.com/65535/51915945930_9c9f3a68c9_6k.jpg" class="img-fluid rounded-start" alt="...">
+          <img ngClass="imagen-card" src="http://motor.elpais.com/wp-content/uploads/2017/06/2017_06_25_foster.jpg" class="img-fluid rounded-start" alt="...">
         </div>
         <div class="col-md-8">
           <div class="card-body">
             <div class="section-title1">
-              <h4 class="card-title" style="text-align: center;" >{{ hotel.nombreHotel }}</h4>
+              <h4 class="card-title" style="text-align: center;" >{{ gasolinera.nombreGas }}</h4>
             </div>
-            <h6 class="card-title" style="text-align: center;" >{{ hotel.email }}</h6>
+            <h6 class="card-title" style="text-align: center;" ><i class="bi bi-geo-alt"></i> {{ gasolinera.direccion }}, {{ gasolinera.departamento }}</h6>
 
-            <p class="card-text" style="justify-self: start;">Dicho establecimiento se encuentra en {{ hotel.direccion }}, {{ hotel.pais }}. Poseen un excelente servicio,
-              siempre al tanto de sus clientes, precios desde {{ hotel.precioHabitacion }} USD.</p>
+            <p class="card-text" style="justify-self: start;">Gasolinera de Prestigio, popular en todo el país, dicha central
+              se encuentra en el departamento de {{ gasolinera.departamento }}, excelente Personal y Servicios. Es posible contactarlos por
+              {{ gasolinera.email }}.</p>
 
-            <p class="card-text" style="text-align:center;">¡Llama ya al {{ hotel.telefono }}!</p>
+            <p class="card-text" style="text-align:center;">¡Promedio de Precios de la Gasolina de Q.{{ gasolinera.precioBase }}!</p>
 
             <form>
               <p class="clasificacion">
@@ -192,7 +193,7 @@
     </div>
   </div>
 </div>
-</section>-->
+</section>
 
 <section id="services" class="services section-bg">
 
