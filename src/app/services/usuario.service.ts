@@ -82,11 +82,10 @@ export class UsuarioService {
   }
 
   /*ADMINISTRACION USUARIOS*/
-  editarClientes(modeloUsuario: Usuario, token): Observable<any> {
-    let parametros = JSON.stringify(modeloUsuario);
+  eliminarClientePerfil(modeloUsuario: Usuario, token): Observable<any> {
     let headersToken = this.headersVariable.set('Authorization', token);
 
-    return this._http.put(this.url + '/editarClienteRol/' + modeloUsuario._id, parametros, { headers: headersToken })
+    return this._http.delete(this.url + '/eliminarClientePerfil/' + modeloUsuario._id, { headers: headersToken })
   }
 
 }

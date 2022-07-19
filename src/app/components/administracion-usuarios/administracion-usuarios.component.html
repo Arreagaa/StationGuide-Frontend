@@ -17,14 +17,14 @@
 
         <div class="carousel-inner" role="listbox">
 
-          <div class="carousel-item active" style="background-image: url(https://live.staticflickr.com/3916/15299647515_029acccdee_b.jpg)">
+          <div class="carousel-item active" style="background-image: url(https://www.autofacil.es/wp-content/uploads/2022/04/gasolinera-low-cost.jpg)">
             <div class="carousel-container">
               <div class="container">
 
                 <h2 class="animate__animated animate__fadeInDown">¡ADMINISTRACIÓN DE USUARIOS!</h2>
                 <p class="animate__animated animate__fadeInUp">CONTROL DE LOS USUARIOS REGISTRADOS</p>
 
-                <a class="btn-get-started scrollto animate__animated animate__fadeInUp" type="button" routerLink="/Admin/Hoteles">REGRESAR</a>
+                <a class="btn-get-started scrollto animate__animated animate__fadeInUp" type="button" routerLink="/Admin/Gasolineras">REGRESAR</a>
 
               </div>
             </div>
@@ -35,20 +35,40 @@
   </section><!-- End Hero Section -->
   <main id="main">
 
-    <!-- ======= Services Section ======= -->
-   <section id="services" class="services section-bg">
-    <div class="container" data-aos="fade-up">
+    <!-- ======= About Us Section ======= -->
+    <section id="about" class="about section-bg">
+      <div class="container" data-aos="fade-up">
 
-      <div class="section-title">
-        <h2>USUARIOS REGISTRADOS</h2>
-        <p class="textoHoteles">Como Administrador, posees acceso a la información de los Usuarios Registrados, esto por motivos de seguridad y políticas de la aplicación, así se lleva
-          el correcto registro de los datos, estos mismos de gran importancia, igualmente se tiene la capacidad de cambiar de Rol a los Usuarios, esto en caso que tengan el cargo de
-          Administradores de algún Hotel en particular. Verifica en las cartas de los Usuarios su Rol o denominación dentro de la Aplicación.
-        </p>
+        <div class="section-title">
+          <h2>USUARIOS</h2>
+        </div>
+
+        <div class="row content">
+          <div class="col-lg-6">
+            <p>
+              Como Administrador, posees acceso a la información de los Usuarios Registrados, esto por motivos de seguridad y políticas de la aplicación, así se lleva el correcto
+              registro de los datos.
+              <br>
+              <br>
+              El proceso administrativo comienza cuando se produce un hecho económico o transacción mercantil de las Gasolineras,
+              que debe ser debidamente registrado hasta finalizar con su inclusión en los estados financieros y estadísticas.
+              La satisfacción del cliente, la optimización de los costes y la innovación están más que nunca en el centro de los desafíos.
+            </p>
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0">
+            <p>
+              La digitalización del proceso de mantenimiento permite establecer un sistema de alerta automático, útil en todos los niveles del establecimiento.
+              <br>
+              <br>
+              Las herramientas digitales van a extenderse por los hoteles para servir al negocio de la Gasolina, ya que algunas estaciones proveen combustibles alternativos, como gas
+              licuado del petróleo, gas natural, gas natural comprimido, etanol, gasohol, biodiésel, hidrógeno y keroseno.
+              Como Administrador debes estar dispuesto a ayudar.
+            </p>
+          </div>
+        </div>
 
       </div>
-    </div>
-  </section><!-- End Services Section -->
+    </section><!-- End About Us Section -->
 
   <section class="services section-bg">
     <div class="container">
@@ -68,14 +88,14 @@
                 <br>
 
                 <p class="card-text" style="justify-self: start;">Excelente Usuario, sabe cómo tratar a las demás personas, se encuentra en
-                  {{user.direccion}}, {{user.pais}}, se agradece su preferencia.
+                  {{user.direccion}}, {{user.departamento}}, se agradece su preferencia.
                 </p>
 
                 <p class="card-text" style="text-align:center;">Contacto por {{ user.email }}.</p>
                 <br>
 
-                  <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalEditarCliente" (click)="getUsuariosId(user._id)">
-                  <i class="bi bi-pencil-square"></i> Modificar Usuario</button>
+                  <button class="btn btn-primary" (click)="getUsuariosId(user._id)" data-bs-toggle="modal" data-bs-target="#modalPenalizarUsuario">
+                    <i class="bi bi-exclamation-octagon"></i> Penalizar Usuario</button>
 
               </div>
             </div>
@@ -92,13 +112,13 @@
 
     <div class="row">
       <div class="col-lg-9 text-center text-lg-start">
-        <h3>Hoteles Asociados</h3>
-        <p>Siendo Administrador, puedes visualizar a todos los Hoteles Asociados con la Aplicación, verifica algunos, ya que Administradores
-          de dichos Hoteles ya se encuentran registrados, debes de aclarar y colocar su identificación dentro del Hotel donde Trabajan.
+        <h3>Noticas y Recomendaciones</h3>
+        <p>la demanda se le suman otros factores como la especulación que sufre el petróleo en la bolsa, la inestabilidad política que existe en el Oriente Próximo y, por supuesto,
+          la caída del euro frente al dólar, ¿Quieres saber más?, ingresa al apartado de Noticas.
         </p>
       </div>
       <div class="col-lg-3 cta-btn-container text-center">
-        <a class="cta-btn align-middle" routerLink="/Admin/Hoteles">Ver Hoteles</a>
+        <a class="cta-btn align-middle" routerLink="/Admin/Hoteles">Visualizar</a>
       </div>
     </div>
 
@@ -229,32 +249,40 @@
 </div>
 </section>
 
-<!--Modal Editar Usuario-->
-<div class="modal fade" id="modalEditarCliente" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<!--Modal Eliminar Usuario-->
+<div class="modal fade" id="modalPenalizarUsuario" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header" style="background-color: #283a5ae6">
-        <h5 class="modal-title" id="exampleModalLabel" style="color: white">Editar Rol del Cliente</h5>
+        <h5 class="modal-title" id="exampleModalLabel" style="color: white">Penalizar Cliente</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
         <form>
 
-          <div class="form-group">
-            <label for="direccioSucursal">Editar Rol del Usuario</label>
-            <select id="rol" style="width:100%; height: 2rem;" name="rol" #rol="ngModel"
-            [(ngModel)]="usuarioModelGetId.rol" required>
-            <option value="ROL_CLIENTE">ROL_CLIENTE</option>
-            <option value="ROL_HOTEL">ROL_HOTEL</option>
-          </select>
+          <div class="mb-3">
+            <label for="inputNombre" class="form-label">Confirmación Nombre</label>
+            <input placeholder="Gasolinera Shell" type="text" class="form-control" name="nombre" #nombre="ngModel" required
+            [(ngModel)]="usuarioModelGetId.nombre" disabled="disable">
+              <div [hidden]="nombre.valid || nombre.pristine"
+                class="alert alert-danger">Se requiere colocar el Nombre para continuar.
+              </div>
+          </div>
 
+          <div class="mb-3">
+            <label for="inputEmail" class="form-label">Confirmación Correo de Contacto</label>
+            <input placeholder="@gmail.com" type="email" class="form-control" name="email" #email="ngModel" required
+            [(ngModel)]="usuarioModelGetId.email" disabled="disable">
+              <div [hidden]="email.valid || email.pristine"
+                class="alert alert-danger">Se requiere colocar el Correo para continuar.
+              </div>
           </div>
 
         </form>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary" (click)="putUsuarios()" data-bs-dismiss="modal">Editar</button>
+        <button type="button" class="btn btn-primary" (click)="deleteUsuarios()" data-bs-dismiss="modal">Confirmar Penalización</button>
       </div>
     </div>
   </div>

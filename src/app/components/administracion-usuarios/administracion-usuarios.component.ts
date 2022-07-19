@@ -14,6 +14,7 @@ import Swal from 'sweetalert2'
 export class AdministracionUsuariosComponent implements OnInit {
 
   public token;
+  public idUsuarios;
 
   //USUARIO
   public usuarioModelGet: Usuario;
@@ -56,28 +57,41 @@ export class AdministracionUsuariosComponent implements OnInit {
     )
   }
 
-  putUsuarios(){
-    this._usuarioService.editarClientes(this.usuarioModelGetId,this._usuarioService.obtenerToken()).subscribe(
-      (response)=>{
-        console.log(response);
+  deleteUsuarios() {
+    Swal.fire({
+      icon: "warning",
+      title: "¿Desea Continuar?",
+      text: "Penalización de Usuario",
+      showCancelButton: true,
+      confirmButtonColor: '#6793F4',
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Si, penalizar.",
+      cancelButtonText: "Cancelar",
+      footer: '<a>Usuario Penalizado.</a>'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        this._usuarioService.eliminarClientePerfil(this.usuarioModelGetId,this.token).subscribe({
+      next: (response: any) => {
+        Swal.fire("Usuario Penalizado", "Penalizado correctamente", "success");
         this.getUsuarios();
-        Swal.fire({
-          icon: 'warning',
-          title: 'Se han realizado cambios en el Usuario',
-          text: '¡Puedes Revisar el Usuario Actualizado!',
-          footer: '<a>Función concretada correctamente.</a>'
-        })
       },
-      (error)=>{
-        console.log(<any>error);
+      error: (err) => {
         Swal.fire({
           icon: 'warning',
           title: 'Algo no anda bien...',
-          text: '¡Revisa que la información este correcta!',
-          footer: 'No dejes campos vacios, ¡gracias!'
+          text: '¡Algo no se encuentra bien!',
+          footer: 'Haznos saber el error, ¡gracias!',
+          confirmButtonColor: '#6793F4'
         })
+        console.log(<any>err)
+      },
+      complete: () => {
       }
-    )
+    });
+      }
+    });
   }
+
+
 
 }
