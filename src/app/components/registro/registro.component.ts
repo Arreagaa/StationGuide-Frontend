@@ -46,7 +46,8 @@ export class RegistroComponent implements OnInit {
           icon: 'success',
           title: 'Te has Registrado Correctamente',
           text: '¡Sea Bienvenido!',
-          footer: '<a>Empieza ya con nuestros Servicios.</a>'
+          footer: '<a>Empieza ya con nuestros Servicios.</a>',
+          confirmButtonColor: '#6793F4',
         })
       },
       (error)=>{

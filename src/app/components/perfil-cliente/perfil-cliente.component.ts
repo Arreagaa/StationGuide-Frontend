@@ -60,7 +60,8 @@ export class PerfilClienteComponent implements OnInit {
           icon: 'success',
           title: 'Has Actualizado tú Perfil Correctamente',
           text: '¡Cambios Realizados!',
-          footer: '<a>Esperamos que todo sea de tu agrado.</a>'
+          footer: '<a>Esperamos que todo sea de tu agrado.</a>',
+          confirmButtonColor: '#6793F4'
         })
         //this.getClienteId(this.id)
         this.identidad = this._usuarioService.obtenerIdentidad();
@@ -81,7 +82,8 @@ export class PerfilClienteComponent implements OnInit {
           icon: 'success',
           title: 'Perfil Eliminado Correctamente',
           text: '¡Lamentamos que te retires!',
-          footer: '<a>Esperamos que todo haya sido de tu agrado.</a>'
+          footer: '<a>Esperamos que todo haya sido de tu agrado.</a>',
+          confirmButtonColor: '#6793F4',
         })
         //this.getClienteId(this.id)
         this.identidad = this._usuarioService.obtenerIdentidad();

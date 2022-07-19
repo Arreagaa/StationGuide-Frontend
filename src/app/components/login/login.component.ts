@@ -70,20 +70,17 @@ export class LoginComponent implements OnInit {
           localStorage.setItem("identidad", JSON.stringify(response.usuario))
           console.log(respuesta);
           if(response.usuario.rol == 'ROL_CLIENTE'){
-            this._router.navigate(['/Usuario/Hoteles'])
+            this._router.navigate(['/Usuario/Gasolineras'])
           }else{
-            this._router.navigate(['/Admin/Hoteles'])
-          }
-
-          if(response.usuario.rol == 'ROL_HOTEL'){
-            this._router.navigate(['/Hotel/Habitaciones'])
+            this._router.navigate(['/Admin/Gasolineras'])
           }
         });
         Swal.fire({
           icon: 'success',
           title: 'Has Iniciado Sesión Correctamente',
           text: '¡Bienvenido!',
-          footer: '<a>Esperamos que todo sea de tu agrado.</a>'
+          footer: '<a>Esperamos que todo sea de tu agrado.</a>',
+          confirmButtonColor: '#6793F4',
         })
 
       },

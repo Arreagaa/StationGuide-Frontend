@@ -21,6 +21,7 @@ import { BuscarPipe } from './pipes/buscar.pipe';
 import { BuscarClientePipe } from './pipes/buscarCliente.pipe';
 import { FooterComponent } from './components/footer/footer.component';
 import { DashboardGasolinerasComponent } from './components/dashboard-gasolineras/dashboard-gasolineras.component';
+import { GasolinerasComponent } from './components/gasolineras/gasolineras.component';
 
 
 @NgModule({
@@ -38,6 +39,7 @@ import { DashboardGasolinerasComponent } from './components/dashboard-gasolinera
     FooterComponent,
     AdministracionUsuariosComponent,
     DashboardGasolinerasComponent,
+    GasolinerasComponent,
   ],
   imports: [
     BrowserModule,

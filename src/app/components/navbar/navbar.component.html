@@ -31,14 +31,14 @@
 
       <li class="nav-item" *ngIf="_usuarioService.obtenerToken()">
       <button class="profile-btn" *ngIf="_usuarioService.obtenerIdentidad().rol === 'ROL_CLIENTE'">
-        <img src="https://fotografias.antena3.com/clipping/cmsimages01/2022/04/11/DD701E93-F614-47E5-9334-8B2235F8565E/como-localizar-gasolinera-mas-barata-cerca_98.jpg?crop=1080,608,x0,y56&width=1900&height=1069&optimize=low&format=webply"/>
+        <img src="https://imagenes.lainformacion.com/files/twitter_thumbnail/uploads/imagenes/2022/03/29/repostando-gasolina.png"/>
         <span><li class="nav-item">
           <a class="nav-link" routerLink="/Usuario/PerfilCliente" *ngIf="_usuarioService.obtenerIdentidad()">{{ _usuarioService.obtenerIdentidad().nombre }}</a>
         </li></span>
       </button>
 
       <button class="profile-btn disable" *ngIf="_usuarioService.obtenerIdentidad().rol === 'ROL_ADMINISTRADOR'">
-        <img src="https://muchosnegociosrentables.com/wp-content/uploads/2018/07/gasolinera-low-cost.jpg" />
+        <img src="https://www.aauniv.com/s/blog/wp-content/uploads/2021/11/beneficios-estudiar-carrera-administracion-empresas-online-1280x720.jpg" />
         <span><li class="nav-item disable">
           <a class="nav-link disable" *ngIf="_usuarioService.obtenerIdentidad()">{{ _usuarioService.obtenerIdentidad().nombre }}</a>
         </li></span>

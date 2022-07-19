@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+</head>
+
+<body>
+
+
+  <!-- ======= hero Section ======= -->
+  <section id="hero">
+    <div class="hero-container">
+      <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+
+        <ol id="hero-carousel-indicators" class="carousel-indicators"></ol>
+
+        <div class="carousel-inner" role="listbox">
+
+          <div class="carousel-item active" style="background-image: url(https://stringfixer.com/files/240834849.jpg)">
+            <div class="carousel-container">
+              <div class="container">
+
+                <h2 class="animate__animated animate__fadeInDown">¡VISITA LAS GASOLINERAS DE TU PREFERENCIA!</h2>
+                <p class="animate__animated animate__fadeInUp">ENCUENTRA LOS MEJORES PRECIOS </p>
+
+                <a class="btn-get-started scrollto animate__animated animate__fadeInUp" type="button"data-bs-toggle="modal" data-bs-target="#modalAgregarGasofa"
+                *ngIf="_usuarioService.obtenerIdentidad().rol === 'ROL_ADMINISTRADOR'"><i class="bi bi-file-earmark-plus"></i> NUEVA GASOLINERA</a>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section><!-- End Hero Section -->
+  <main id="main">
+
+    <!-- ======= Clients Section ======= -->
+   <section id="clients" class="clients section-bg">
+    <div class="container">
+
+      <div class="row" data-aos="zoom-in">
+
+        <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+          <img src="https://llyasa.com/wp-content/uploads/2017/03/logo-shell-trans2.png" class="img-fluid" alt="">
+        </div>
+
+        <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+          <img src="https://1000marcas.net/wp-content/uploads/2020/11/Texaco-Logo.png" class="img-fluid" alt="">
+        </div>
+
+        <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+          <img src="https://www.opem.com.ar/wp-content/uploads/2020/11/PUMA.png" class="img-fluid" alt="">
+        </div>
+
+        <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+          <img src="https://assets.website-files.com/58a26208fa80129641d66eff/60bfdc855bda40f30cef7df9_unologo.png" class="img-fluid" alt="">
+        </div>
+
+        <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+          <img src="https://serprogas.com.gt/wp-content/uploads/2020/05/Logo-fin-1024x214.png" class="img-fluid" alt="">
+        </div>
+
+        <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+          <img src="https://gasautoca.com/subidos_gasautoca-somosbla/2017/12/GasAuto_NewLogo-1borde-300x139.png" class="img-fluid" alt="">
+        </div>
+
+      </div>
+
+    </div>
+  </section><!-- End Cliens Section -->
+
+
+   <!-- ======= Inicio de la Vista Cliente ======= -->
+   <section id="services" class="services section-bg">
+    <div class="container" data-aos="fade-up">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>GASOLINERAS</h2>
+          <p>Estaciones de Servicios o establecimientos dedicados a la venta de productos derivado del petróleo a granel y mediante surtidores.
+            Generalmente se ubican en puntos convenientes de zonas urbanas y próximas a las carreteras, es posible parar y repostar el combustible de los vehículos
+          </p>
+        </div>
+
+        <div class="row">
+          <div class="col-xl-3 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+            <div class="icon-box">
+              <div class="icon"></div>
+              <h4><a>Servicios</a></h4>
+              <p> Surtidores y depósitos de combustible, reguladores de presión de los neumáticos, el agua y refrigeración.</p>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
+            <div class="icon-box">
+              <div class="icon"></div>
+              <h4><a>Localizaciones</a></h4>
+              <p>Por medio de varias funciones, como barras de búsqueda, encuentra la locación exacta de tu Gasolinera de preferencia.</p>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in" data-aos-delay="300">
+            <div class="icon-box">
+              <div class="icon"></div>
+              <h4><a>Noticias</a></h4>
+              <p>Novedoso apartado de Noticias, descubre los más importante sobre el mundo de la Gasolina, y recibe varias recomendaciones.</p>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in" data-aos-delay="400" *ngIf="_usuarioService.obtenerIdentidad().rol === 'ROL_ADMINISTRADOR'" routerLink="/Admin/AdministracionUsuarios">
+            <div class="icon-box">
+              <div class="icon"></div>
+              <h4><a>Servicio al Cliente</a></h4>
+              <p>Empatía por las necesidades del cliente. Con un servicio ágil y, resolutivo.
+                Anticiparse a los posibles problemas.</p>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in" data-aos-delay="400"  *ngIf="_usuarioService.obtenerIdentidad().rol === 'ROL_CLIENTE'">
+            <div class="icon-box">
+              <div class="icon"></div>
+              <h4><a>Servicio al Cliente</a></h4>
+              <p>Empatía por las necesidades del cliente. Con un servicio ágil y, resolutivo.
+                Anticiparse a los posibles problemas.</p>
+            </div>
+          </div>
+
+
+        </div>
+
+      </div>
+    </div>
+  </section><!-- End Services Section -->
+
+  <section class="services section-bg">
+    <div class="container">
+      <div class="input-group">
+        <div class="search-wrapper">
+          <input [(ngModel)]="buscar" type="Buscar" class="search-input" type="text" placeholder="Buscar">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="25" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="feather feather-search" viewBox="0 0 24 24">
+            <defs></defs>
+            <circle cx="11" cy="11" r="8"></circle>
+            <path d="M21 21l-4.35-4.35"></path>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="services section-bg">
+  <div class="container" style="flex-wrap: wrap;">
+  <div class="row">
+    <div class="card mb-3 text-center" style="max-height: 300px" *ngFor="let gasolinera of gasolinerasModelGet | buscar:buscar" >
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img ngClass="imagen-card" src="https://breaking.com.mx/wp-content/uploads/2017/12/2181_1-estacion-de-servicio-en-legarda-XL.jpg" class="img-fluid rounded-start" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <div class="section-title1">
+              <h4 class="card-title" style="text-align: center;">{{ gasolinera.nombreGas }}</h4>
+            </div>
+            <h6 class="card-title" style="text-align: center;"><i class="bi bi-geo-alt"></i> {{ gasolinera.direccion }}, {{ gasolinera.departamento }}</h6>
+
+            <p class="card-text" style="justify-self: start;">Gasolinera de Prestigio, popular en todo el país, dicha central
+              se encuentra en el departamento de {{ gasolinera.departamento }}, excelente Personal y Servicios. Es posible contactarlos por
+              {{ gasolinera.email }}.</p>
+
+            <p class="card-text" style="text-align:center;">¡Promedio de Precios de la Gasolina de Q.{{ gasolinera.precioBase }}!</p>
+
+            <button class="btn btn-primary" *ngIf="_usuarioService.obtenerIdentidad().rol === 'ROL_ADMINISTRADOR'" data-bs-toggle="modal"
+            data-bs-target="#modalEditarGasofa" (click)="getGasolinerasId(gasolinera._id)">
+              <i class="bi bi-pencil-square"></i>
+            </button>
+            <button class="btn btn-primary" *ngIf="_usuarioService.obtenerIdentidad().rol === 'ROL_ADMINISTRADOR'" (click)="deleteGasolinera(gasolinera._id)">
+              <i class="bi bi-file-earmark-minus"></i>
+            </button>
+
+            <button class="btn btn-primary" *ngIf="_usuarioService.obtenerIdentidad().rol === 'ROL_CLIENTE'">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-fuel-pump" viewBox="0 0 15 17">
+                <path d="M3 2.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 .5.5v5a.5.5 0 0 1-.5.5h-5a.5.5 0 0 1-.5-.5v-5Z"/>
+                <path d="M1 2a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v8a2 2 0 0 1 2 2v.5a.5.5 0 0 0 1 0V8h-.5a.5.5 0 0 1-.5-.5V4.375a.5.5 0 0 1 .5-.5h1.495c-.011-.476-.053-.894-.201-1.222a.97.97 0 0 0-.394-.458c-.184-.11-.464-.195-.9-.195a.5.5 0 0 1 0-1c.564 0 1.034.11 1.412.336.383.228.634.551.794.907.295.655.294 1.465.294 2.081v3.175a.5.5 0 0 1-.5.501H15v4.5a1.5 1.5 0 0 1-3 0V12a1 1 0 0 0-1-1v4h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1V2Zm9 0a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v13h8V2Z"/>
+              </svg> Visualizar Estaciones
+            </button>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- ======= Cta Section ======= -->
+<section id="cta" class="cta" *ngIf="_usuarioService.obtenerIdentidad().rol === 'ROL_ADMINISTRADOR'">
+  <div class="container" data-aos="zoom-in">
+
+    <div class="row">
+      <div class="col-lg-9 text-center text-lg-start">
+        <h3>Usuarios Registrados</h3>
+        <p>Siendo Administrador, puedes visualizar a todos los usuarios registrados dentro de la Aplicación, verifica que todos cumplan con las normas dentro de la
+          aplicación, puedes acceder a esta función desde de igual forma desde las cartas de acceso, en la parte superior, Servicio al Cliente.
+        </p>
+      </div>
+      <div class="col-lg-3 cta-btn-container text-center">
+        <a class="cta-btn align-middle" routerLink="/Admin/AdministracionUsuarios">Ver Usuarios</a>
+      </div>
+    </div>
+
+  </div>
+</section><!-- End Cta Section -->
+
+<!-- ======= Cta Section ======= -->
+<section id="cta" class="cta" *ngIf="_usuarioService.obtenerIdentidad().rol === 'ROL_CLIENTE'">
+  <div class="container" data-aos="zoom-in">
+
+    <div class="row">
+      <div class="col-lg-9 text-center text-lg-start">
+        <h3>Tu Perfil de Cliente</h3>
+        <p>Si algo no anda bien con tu perfil, o bien deseas hacer algún cambio, lo puede hacer dirigiéndote, a la barra de navegación, presionando tu nombre de Usuario, o bien,
+          desde este botón, realiza los cambios necesarios, o elimina tu cuenta si así lo deseas.
+        </p>
+      </div>
+      <div class="col-lg-3 cta-btn-container text-center">
+        <a class="cta-btn align-middle" routerLink="/Usuario/PerfilCliente">¡Tú tienes el Control!</a>
+      </div>
+    </div>
+
+  </div>
+</section><!-- End Cta Section -->
+
+<section id="services" class="services section-bg">
+
+  <div id="portfolio" class="portfolio-area area-padding fix">
+    <div class="container">
+      <div class="row">
+    <div class="section-title">
+      <h2>GALERÍA DE FOTOGRAFÍAS</h2>
+    </div>
+  </div>
+
+  <div class="row awesome-project-content portfolio-container">
+  <div class="col-md-4 col-sm-4 col-xs-12 portfolio-item filter-app portfolio-item">
+    <div class="single-awesome-project">
+      <div class="awesome-img">
+        <a href="#"><img src="https://images.adsttc.com/media/images/5da3/9ead/3312/fd25/b100/00de/slideshow/stringio.jpg?1571004070" alt="" /></a>
+        <div class="add-actions text-center">
+          <div class="project-dec">
+            <a class="portfolio-lightbox" data-gallery="myGallery">
+              <h4>Instalaciones</h4>
+              <span>Orden y Espacios Amplios</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-4 col-sm-4 col-xs-12 portfolio-item filter-web">
+    <div class="single-awesome-project">
+      <div class="awesome-img">
+        <a href="#"><img src="https://www.diariomotor.com/imagenes/2021/07/ahorrar-combustible-repostar-barato-verano-2021-gasolinera-surtidor-mangura.jpg" alt="" /></a>
+        <div class="add-actions text-center">
+          <div class="project-dec">
+            <a class="portfolio-lightbox" data-gallery="myGallery">
+              <h4>Capacidad</h4>
+              <span>Para Satisfacer necesidades</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-4 col-sm-4 col-xs-12 portfolio-item filter-card">
+    <div class="single-awesome-project">
+      <div class="awesome-img">
+        <a href="#"><img src="https://officialpress.es/wp-content/uploads/2022/04/13d9bf959f446cb8580b19b2bc52e6e401f09ea6w.jpg" alt="" /></a>
+        <div class="add-actions text-center">
+          <div class="project-dec">
+            <a class="portfolio-lightbox" data-gallery="myGallery">
+              <h4>La Belleza de Guatemala</h4>
+              <span>Gasolineras y Servicios</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-4 col-sm-4 col-xs-12 portfolio-item filter-card">
+    <div class="single-awesome-project">
+      <div class="awesome-img">
+        <a href="#"><img src="https://e00-marca.uecdn.es/assets/multimedia/imagenes/2022/02/17/16451033061298.jpg" alt="" /></a>
+        <div class="add-actions text-center">
+          <div class="project-dec">
+            <a class="portfolio-lightbox" data-gallery="myGallery">
+              <h4>Los Mejores Precios</h4>
+              <span>Disfruta de la Comodidad</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-4 col-sm-4 col-xs-12 portfolio-item filter-card">
+    <div class="single-awesome-project">
+      <div class="awesome-img">
+        <a href="#"><img src="https://media.revistaad.es/photos/60c755b6c06a6d36cb1fbabc/master/w_1800,h_1200,c_limit/13962.jpg" alt="" /></a>
+        <div class="add-actions text-center">
+          <div class="project-dec">
+            <a class="portfolio-lightbox" data-gallery="myGallery" >
+              <h4>Lo Mejor de Nosotros</h4>
+              <span>Lugares Inolvidables</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-4 col-sm-4 col-xs-12 portfolio-item filter-card">
+    <div class="single-awesome-project">
+      <div class="awesome-img">
+        <a href="#"><img src="https://www.eluniverso.com/resizer/J3tkwCVp2Ko78EgKxL55RlZLWA0=/996x670/smart/filters:quality(70)/cloudfront-us-east-1.images.arcpublishing.com/eluniverso/7J7I36VTSVAZFNC4BFNTYE37WQ.jpg" alt="" /></a>
+        <div class="add-actions text-center">
+          <div class="project-dec">
+            <a class="portfolio-lightbox" data-gallery="myGallery" >
+              <h4>Ubucaciones Concretas</h4>
+              <span>Visita directamente</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</section><!-- End Services Section -->
+
+<!--Modal Agregar Gasolinera-->
+<div class="modal fade" id="modalAgregarGasofa" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header" style="background-color: #283a5ae6">
+        <h5 class="modal-title" id="exampleModalLabel" style="color: white">Agregar Gasolinera</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form #addForm="ngForm">
+
+          <div class="mb-3">
+            <label for="inputNombreGas" class="form-label">Nombre de la Hotel</label>
+            <input placeholder="Gasolinera Shell" type="text" class="form-control" name="nombreGas" #nombreGas="ngModel" required
+            [(ngModel)]="gasolinerasModelPost.nombreGas">
+              <div [hidden]="nombreGas.valid || nombreGas.pristine"
+                class="alert alert-danger">Se requiere colocar el Nombre para continuar.
+              </div>
+          </div>
+
+          <div class="mb-3">
+            <label for="inputEmail" class="form-label">Correo de Contacto</label>
+            <input placeholder="@gmail.com" type="email" class="form-control" name="email" #email="ngModel" required
+            [(ngModel)]="gasolinerasModelPost.email">
+              <div [hidden]="email.valid || email.pristine"
+                class="alert alert-danger">Se requiere colocar el Correo para continuar.
+              </div>
+          </div>
+
+          <div class="mb-3">
+            <label for="inputDireccion" class="form-label">Dirección de la Gasolinera</label>
+            <input placeholder="Ubicacion Concreta" type="text" class="form-control" name="direccion" #direccion="ngModel" required
+            [(ngModel)]="gasolinerasModelPost.direccion">
+              <div [hidden]="direccion.valid || direccion.pristine"
+                class="alert alert-danger">Se requiere colocar la Dirección para continuar.
+              </div>
+          </div>
+
+          <div class="mb-3">
+            <label for="inputDepartamento" class="form-label">Departamento</label>
+            <input placeholder="Guatemala" type="text" class="form-control" name="departamento" #departamento="ngModel" required
+            [(ngModel)]="gasolinerasModelPost.departamento">
+              <div [hidden]="departamento.valid || departamento.pristine"
+                class="alert alert-danger">Se requiere colocar el Departamento para continuar.
+              </div>
+          </div>
+
+          <div class="mb-3">
+            <label for="inputPrecioBase" class="form-label">Promedio de Precios</label>
+            <input placeholder="USD" type="number" class="form-control" name="precioBase" #precioBase="ngModel" required
+            [(ngModel)]="gasolinerasModelPost.precioBase">
+              <div [hidden]="precioBase.valid || precioBase.pristine"
+                class="alert alert-danger">Se requiere colocar el Promedio de Precios para continuar.
+              </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" (click)="postGasolinera(addForm)" data-bs-dismiss="modal">Agregar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Modal Editar Gasolinera-->
+<div class="modal fade" id="modalEditarGasofa" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header" style="background-color: #283a5ae6">
+        <h5 class="modal-title" id="exampleModalLabel" style="color: white">Editar Gasolinera</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form #addForm="ngForm">
+
+          <div class="mb-3">
+            <label for="inputNombreGas" class="form-label">Nombre de la Hotel</label>
+            <input placeholder="Gasolinera Shell" type="text" class="form-control" name="nombreGas" #nombreGas="ngModel" required
+            [(ngModel)]="gasolinerasModelGetId.nombreGas">
+              <div [hidden]="nombreGas.valid || nombreGas.pristine"
+                class="alert alert-danger">Se requiere colocar el Nombre para continuar.
+              </div>
+          </div>
+
+          <div class="mb-3">
+            <label for="inputEmail" class="form-label">Correo de Contacto</label>
+            <input placeholder="@gmail.com" type="email" class="form-control" name="email" #email="ngModel" required
+            [(ngModel)]="gasolinerasModelGetId.email">
+              <div [hidden]="email.valid || email.pristine"
+                class="alert alert-danger">Se requiere colocar el Correo para continuar.
+              </div>
+          </div>
+
+          <div class="mb-3">
+            <label for="inputDireccion" class="form-label">Dirección de la Gasolinera</label>
+            <input placeholder="Ubicacion Concreta" type="text" class="form-control" name="direccion" #direccion="ngModel" required
+            [(ngModel)]="gasolinerasModelGetId.direccion">
+              <div [hidden]="direccion.valid || direccion.pristine"
+                class="alert alert-danger">Se requiere colocar la Dirección para continuar.
+              </div>
+          </div>
+
+          <div class="mb-3">
+            <label for="inputDepartamento" class="form-label">Departamento</label>
+            <input placeholder="Guatemala" type="text" class="form-control" name="departamento" #departamento="ngModel" required
+            [(ngModel)]="gasolinerasModelGetId.departamento">
+              <div [hidden]="departamento.valid || departamento.pristine"
+                class="alert alert-danger">Se requiere colocar el Departamento para continuar.
+              </div>
+          </div>
+
+          <div class="mb-3">
+            <label for="inputPrecioBase" class="form-label">Promedio de Precios</label>
+            <input placeholder="USD" type="number" class="form-control" name="precioBase" #precioBase="ngModel" required
+            [(ngModel)]="gasolinerasModelGetId.precioBase">
+              <div [hidden]="precioBase.valid || precioBase.pristine"
+                class="alert alert-danger">Se requiere colocar el Promedio de Precios para continuar.
+              </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" (click)="putGasolinera()" data-bs-dismiss="modal">Editar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-footer></app-footer>
+</main>
+</body>
+</html>
+
