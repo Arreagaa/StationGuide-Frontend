@@ -24,6 +24,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { DashboardGasolinerasComponent } from './components/dashboard-gasolineras/dashboard-gasolineras.component';
 import { GasolinerasComponent } from './components/gasolineras/gasolineras.component';
 import { NoticiasComponent } from './components/noticias/noticias.component';
+import { EstacionesComponent } from './components/estaciones/estaciones.component';
 
 
 @NgModule({
@@ -44,6 +45,7 @@ import { NoticiasComponent } from './components/noticias/noticias.component';
     DashboardGasolinerasComponent,
     GasolinerasComponent,
     NoticiasComponent,
+    EstacionesComponent,
   ],
   imports: [
     BrowserModule,

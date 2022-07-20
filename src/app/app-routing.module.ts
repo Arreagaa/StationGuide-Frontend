@@ -10,6 +10,7 @@ import { AdministracionUsuariosComponent } from './components/administracion-usu
 import { DashboardGasolinerasComponent } from './components/dashboard-gasolineras/dashboard-gasolineras.component';
 import { GasolinerasComponent } from './components/gasolineras/gasolineras.component';
 import { NoticiasComponent } from './components/noticias/noticias.component';
+import { EstacionesComponent } from './components/estaciones/estaciones.component';
 
 import { UsuarioGuard } from './services/usuario.guard';
 import { AdministradorGuard } from './services/administrador.guard';
@@ -30,6 +31,8 @@ const routes: Routes = [
       {path: 'Gasolineras', component: GasolinerasComponent},
 
       {path: 'Noticias', component: NoticiasComponent},
+
+      {path: 'Estaciones/:idGasolinera', component: EstacionesComponent},
     ]
   },
   {
@@ -41,6 +44,8 @@ const routes: Routes = [
       {path: 'Gasolineras', component: GasolinerasComponent},
 
       {path: 'Noticias', component: NoticiasComponent},
+
+      {path: 'Estaciones/:idGasolinera', component: EstacionesComponent},
     ]
   },
   { path: "**", component: LoginComponent }
