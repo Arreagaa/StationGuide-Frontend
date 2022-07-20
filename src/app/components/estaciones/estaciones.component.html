@@ -175,9 +175,26 @@
             </div>
             <div class="card-body">
               <h5 class="card-title"><a> {{station.nombreSucursal}}</a></h5>
-              <p class="card-text" style="text-align: justify;">
-                Dar a conocer a todos los usuarios los precios más accesibles según la cercanía de las gasolineras, es decir, todo dependerá de la ubicación del usuario y las
-                preferencias que posean.
+              <p class="card-text" style="text-align: justify;" *ngIf="station.market == true">
+                Ubicada en {{station.direccion}}, {{station.departamento}}.
+                Se cuenta con Supermercado Disponible.
+              </p>
+
+              <p class="card-text" style="text-align: justify;" *ngIf="station.market != true">
+                Ubicada en {{station.direccion}}, {{station.departamento}}.
+                Supermercado No Disponible o Inexistente.
+              </p>
+
+              <p class="card-text" style="text-align: center;">
+                <i class="bi bi-check"></i> Precio Actual Gasolina Diesel Q.{{station.diesel}}
+              </p>
+
+              <p class="card-text" style="text-align: center;">
+                <i class="bi bi-check"></i> Precio Actual Gasolina Regular Q.{{station.regular}}
+              </p>
+
+              <p class="card-text" style="text-align: center;">
+                <i class="bi bi-check"></i> Precio Actual Gasolina Súper Q.{{station.SuperGas}}
               </p>
 
             </div>
@@ -210,6 +227,83 @@
 
 
 </section><!-- End Services Section -->
+
+<!--Modal Agregar Estacion-->
+<div class="modal fade" id="modalAgregarEstacion" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header" style="background-color: #283a5ae6">
+        <h5 class="modal-title" id="exampleModalLabel" style="color: white">Agregar Estación</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form #addForm="ngForm">
+
+          <div class="mb-3">
+            <label for="inputNombreSucursal" class="form-label">Nombre de la Estación</label>
+            <input placeholder="Estación" type="text" class="form-control" name="nombreSucursal" #nombreSucursal="ngModel" required
+            [(ngModel)]="sucursaleslModelPost.nombreSucursal">
+              <div [hidden]="nombreSucursal.valid || nombreSucursal.pristine"
+                class="alert alert-danger">Se requiere colocar el Nombre para continuar.
+              </div>
+          </div>
+
+          <div class="mb-3">
+            <label for="inputDireccion" class="form-label">Dirección de la Estación</label>
+            <input placeholder="Dirección Concreta" type="text" class="form-control" name="direccion" #direccion="ngModel" required
+            [(ngModel)]="sucursaleslModelPost.direccion">
+              <div [hidden]="direccion.valid || direccion.pristine"
+                class="alert alert-danger">Se requiere colocar la Dirección para continuar.
+              </div>
+          </div>
+
+          <div class="mb-3">
+            <label for="inputDepartamento" class="form-label">Departamento de Guatemala</label>
+            <input placeholder="Departamento" type="text" class="form-control" name="departamento" #departamento="ngModel" required
+            [(ngModel)]="sucursaleslModelPost.departamento">
+              <div [hidden]="departamento.valid || departamento.pristine"
+                class="alert alert-danger">Se requiere colocar el Departamento para continuar.
+              </div>
+          </div>
+
+          <div class="mb-3">
+            <label for="inputDiesel" class="form-label">Precio Gasolina Diesel</label>
+            <input placeholder="Gasolina Diesel" type="number" class="form-control" name="diesel" #diesel="ngModel" required
+            [(ngModel)]="sucursaleslModelPost.diesel">
+              <div [hidden]="diesel.valid || diesel.pristine"
+                class="alert alert-danger">Se requiere colocar el Precio de la Gasolina Diesel para continuar.
+              </div>
+          </div>
+
+          <div class="mb-3">
+            <label for="inputRegular" class="form-label">Precio Gasolina Regular</label>
+            <input placeholder="Gasolina Regular" type="number" class="form-control" name="regular" #regular="ngModel" required
+            [(ngModel)]="sucursaleslModelPost.regular">
+              <div [hidden]="regular.valid || regular.pristine"
+                class="alert alert-danger">Se requiere colocar el Precio de la Gasolina Regular para continuar.
+              </div>
+          </div>
+
+          <div class="mb-3">
+            <label for="inputSuper" class="form-label">Precio Gasolina Súper</label>
+            <input placeholder="Gasolina Súper" type="text" class="form-control" name="SuperGas" #SuperGas="ngModel" required
+            [(ngModel)]="sucursaleslModelPost.SuperGas">
+              <div [hidden]="SuperGas.valid || SuperGas.pristine"
+                class="alert alert-danger">Se requiere colocar el Precio de la Gasolina Súper para continuar.
+              </div>
+          </div>
+
+          
+
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" (click)="postEstaciones(addForm)" data-bs-dismiss="modal">Agregar</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 <app-footer></app-footer>
 </main>

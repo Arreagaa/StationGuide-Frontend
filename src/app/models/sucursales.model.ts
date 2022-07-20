@@ -4,8 +4,10 @@ export class Sucursales {
     public nombreSucursal: String,
     public direccion: String,
     public departamento: string,
-    public Super: Number,
+    public SuperGas: Number,
     public regular: Number,
-    public diesel: Number
+    public diesel: Number,
+    public market: Boolean,
+    public idGasolinera: String
   ){}
 }

@@ -39,8 +39,8 @@ export class EstacionesComponent implements OnInit {
     this.token = this._usuarioService.obtenerToken();
 
     //ESTACTIONES
-    this.sucursaleslModelPost = new Sucursales('','', '','',0,0,0);
-    this.sucursalesModelGetId = new Sucursales('','', '','',0,0,0);
+    this.sucursaleslModelPost = new Sucursales('','', '','',0,0,0,true,'');
+    this.sucursalesModelGetId = new Sucursales('','', '','',0,0,0, true,'');
   }
 
   ngOnInit(): void {
@@ -55,6 +55,8 @@ export class EstacionesComponent implements OnInit {
 
       this.idGasolinera = dataRuta.get('idGasolinera')
     });
+
+    this.sucursaleslModelPost = new Sucursales('','', '','',0,0,0, true,this.idGasolinera)
   }
 
   //OBTENER DATOS DE LA GASOLINERA POR SU ID
