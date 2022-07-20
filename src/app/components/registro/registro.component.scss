@@ -1,4 +1,4 @@
-body{
+/*body{
   background: linear-gradient(to right, #283a5ae6, #283a5ae6);
   font-family: "Open Sans", sans-serif;
   font-size: 20px;
@@ -63,4 +63,94 @@ text-align: center;
 .texto{
   font-size: 18px;
   color: #283a5ae6;
+}*/
+
+
+.h3{
+  font-size: 40px;
+  color: #283a5ae6;
+  text-align: center;
+  }
+  
+*{
+  box-sizing: border-box;
+}
+
+
+
+body{
+  margin: 0;
+  font-family: sans-serif;
+  background-image: url(https://www.autopista.es/uploads/s1/10/26/70/47/cuanto-te-puedes-ahorrar-si-repostas-el-coche-en-una-gasolinera-low-cost-foto-istock.jpeg);
+}
+
+h1{
+  color: #fff;
+  text-align: center;
+}
+
+.form-register{
+  width: 95%;
+  max-width: 500px;
+  margin: auto;
+  background: white;
+  border-radius: 7px;
+}
+
+.form__titulo{
+  background: deepskyblue;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  font-weight: 100;
+  font-size: 30px;
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+  border-bottom: 5px solid crimson;
+}
+
+.contenedor-inputs{
+  padding: 10px 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+input{
+  margin-bottom: 15px;
+  padding: 15px;
+  font-size: 16px;
+  border-radius: 3px;
+  border: 1px solid darkgray
+}
+
+.input-48{
+  width: 48%; 
+}
+
+.input-100{
+  width: 100%; 
+}
+
+.btn-enviar{
+  background: crimson;
+  color: #fff;
+  margin: auto;
+  padding: 10px 40px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.btn-enviar:ative{
+  transform: scale(1.05);
+}
+
+.form__link{
+  width: 100%;
+  margin: 0;
+  text-align: center;
+  font-size: 14px
+}
+.sig{
+  background-color: #ed1111;
 }

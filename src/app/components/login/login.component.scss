@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+/*@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
 
 * {
 	box-sizing: border-box;
@@ -272,4 +272,180 @@ flex-direction: row;
   .br1{
     font-size: 16px;
     margin-top: 60px;
+    }*/
+------------------------------------------------------
+    body,
+    .signin {
+      background-color: #d3d3d3;
+      font-family: 'Montserrat', sans-serif;
+      color: #fff;
+      font-size: 14px;
+      letter-spacing: 1px;
+    }
+
+    .login {
+
+      position: relative;
+      height: 900px;
+      width: 700px;
+      margin: auto;
+      padding: 60px 60px;
+      background: url(https://img.automexico.com/2018/11/02/b09YwtPD/gasolinera-en-mex-03-4171.jpg) no-repeat   center center #505050;
+      background-size: cover;
+      box-shadow: 0px 30px 60px -5px rgb(2, 2, 2);
+     color: #FFF;
+    }
+
+    form {
+      padding-top: 80px;
+    }
+
+    .active {
+      border-bottom: 2px solid #ed1111;
+    }
+
+    .nonactive {
+      color: rgb(255, 255, 255);
+    }
+
+    h2 {
+      padding-left: 12px;
+      font-size: 22px;
+      text-transform: uppercase;
+      padding-bottom: 5px;
+      letter-spacing: 2px;
+      display: inline-block;
+      font-weight: 100;
+    }
+
+    h2:first-child {
+      padding-left: 0px;
+    }
+
+    span {
+      margin-top:10;
+      text-transform: uppercase;
+      font-size: 12px;
+      display: inline-block;
+      position: relative;
+      top: -65px;
+      transition: all 0.5s ease-in-out;
+    }
+
+    .text {
+      border: none;
+      width: 89%;
+      padding: 10px 20px;
+      display: block;
+      height: 15px;
+      border-radius: 20px;
+      background: rgb(255, 255, 255);
+      border: 2px solid rgb(255, 255, 255);
+      overflow: hidden;
+      margin-top: 15px;
+      transition: all 0.5s ease-in-out;
+    }
+
+    .text:focus {
+      outline: 0;
+      border: 2px solid rgb(253, 252, 252);
+      border-radius: 20px;
+      background: rgb(241, 240, 240);
+    }
+
+    .text:focus + span {
+      opacity: 0.6;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      font-family: 'Montserrat', sans-serif;
+      color: #fff;
+    }
+
+
+
+    input {
+      display: inline-block;
+      padding-top: 20px;
+      font-size: 14px;
+    }
+
+    h2,
+    span,
+    .custom-checkbox {
+      margin-left: 20px;
+      color: #FFF;
+    }
+
+    .custom-checkbox {
+      -webkit-appearance: none;
+      background-color: rgb(255, 249, 249);
+      padding: 8px;
+      border-radius: 2px;
+      display: inline-block;
+      position: relative;
+      top: 6px;
+    }
+
+    .custom-checkbox:checked {
+      background-color: rgb(237, 32, 17);
+    }
+
+    .custom-checkbox:checked:after {
+      content: '\2714';
+      font-size: 10px;
+      position: absolute;
+      top: 1px;
+      left: 4px;
+      color: #fff;
+    }
+
+    .custom-checkbox:focus {
+      outline: none;
+    }
+
+    label {
+      display: inline-block;
+      padding-top: 10px;
+      padding-left: 5px;
+    }
+
+    .signin {
+      background-color: #ed1111;
+      color: #FFF;
+      width: 100%;
+      padding: 10px 20px;
+      display: block;
+      height: 39px;
+      border-radius: 20px;
+      margin-top: 30px;
+      transition: all 0.5s ease-in-out;
+      border: none;
+      text-transform: uppercase;
+    }
+
+    .signin:hover {
+      background: #f54040;
+      box-shadow: 0px 4px 35px -5px #4082f5;
+      cursor: pointer;
+    }
+
+    .signin:focus {
+      outline: none;
+    }
+
+    hr {
+      border: 1px solid rgb(255, 255, 255);
+      top: 85px;
+      position: relative;
+    }
+
+    a {
+      text-align: center;
+      display: block;
+      top: 120px;
+      position: relative;
+      text-decoration: none;
+      color: rgb(255, 255, 255);
     }
