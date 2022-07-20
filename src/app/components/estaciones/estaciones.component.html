@@ -168,18 +168,18 @@
       </div>
 
       <div class="row">
-        <div class="col-md-6 d-flex" data-aos="fade-right">
+        <div class="col-md-6 d-flex" data-aos="fade-right" *ngFor="let station of sucursalesModelGet">
           <div class="card">
             <div class="card-img">
               <img src="https://media.istockphoto.com/photos/modern-blue-service-station-picture-id171259711?k=20&m=171259711&s=612x612&w=0&h=l4AKr84nApirBingTkqbsUdOhvaui1CQathOi_eKjcE=" alt="...">
             </div>
             <div class="card-body">
-              <h5 class="card-title"><a >Nuestro Propósito</a></h5>
+              <h5 class="card-title"><a> {{station.nombreSucursal}}</a></h5>
               <p class="card-text" style="text-align: justify;">
                 Dar a conocer a todos los usuarios los precios más accesibles según la cercanía de las gasolineras, es decir, todo dependerá de la ubicación del usuario y las
                 preferencias que posean.
               </p>
-              
+
             </div>
           </div>
         </div>
