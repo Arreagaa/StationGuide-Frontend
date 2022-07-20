@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+</head>
+
+<body>
+
+
+  <!-- ======= hero Section ======= -->
+  <section id="hero">
+    <div class="hero-container">
+      <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+
+        <ol id="hero-carousel-indicators" class="carousel-indicators"></ol>
+
+        <div class="carousel-inner" role="listbox">
+
+          <div class="carousel-item active" style="background-image: url(https://www.diariomotor.com/imagenes/2022/03/gasolinera-repsol-rebaja-precios-noresizing-01-62417f51ee403.jpg)">
+            <div class="carousel-container">
+              <div class="container">
+
+                <h2 class="animate__animated animate__fadeInDown">¡VISITA LAS GASOLINERAS DE TU PREFERENCIA!</h2>
+                <p class="animate__animated animate__fadeInUp">ENCUENTRA LOS MEJORES PRECIOS </p>
+
+                <a class="btn-get-started scrollto animate__animated animate__fadeInUp" type="button"data-bs-toggle="modal" data-bs-target="#modalAgregarNew"
+                *ngIf="_usuarioService.obtenerIdentidad().rol === 'ROL_ADMINISTRADOR'"><i class="bi bi-file-earmark-plus"></i> AGREGAR ARTÍCULO</a>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section><!-- End Hero Section -->
+  <main id="main">
+
+    <!-- ======= Clients Section ======= -->
+   <section id="clients" class="clients section-bg">
+    <div class="container">
+
+      <div class="row" data-aos="zoom-in">
+
+        <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+          <img src="https://llyasa.com/wp-content/uploads/2017/03/logo-shell-trans2.png" class="img-fluid" alt="">
+        </div>
+
+        <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+          <img src="https://1000marcas.net/wp-content/uploads/2020/11/Texaco-Logo.png" class="img-fluid" alt="">
+        </div>
+
+        <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+          <img src="https://www.opem.com.ar/wp-content/uploads/2020/11/PUMA.png" class="img-fluid" alt="">
+        </div>
+
+        <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+          <img src="https://assets.website-files.com/58a26208fa80129641d66eff/60bfdc855bda40f30cef7df9_unologo.png" class="img-fluid" alt="">
+        </div>
+
+        <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+          <img src="https://serprogas.com.gt/wp-content/uploads/2020/05/Logo-fin-1024x214.png" class="img-fluid" alt="">
+        </div>
+
+        <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+          <img src="https://gasautoca.com/subidos_gasautoca-somosbla/2017/12/GasAuto_NewLogo-1borde-300x139.png" class="img-fluid" alt="">
+        </div>
+
+      </div>
+
+    </div>
+  </section><!-- End Cliens Section -->
+
+
+   <!-- ======= Blog Page ======= -->
+    <section class="services section-bg">
+   <div class="blog-page area-padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-md-4">
+          <div class="page-head-blog">
+            <div class="single-blog-page">
+              <!-- search option start -->
+                <div class="input-group">
+                  <div class="search-wrapper">
+                    <input [(ngModel)]="buscarNew" type="Buscar" class="search-input" type="text" placeholder="Buscar">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="25" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="feather feather-search" viewBox="0 0 24 24">
+                      <defs></defs>
+                      <circle cx="11" cy="11" r="8"></circle>
+                      <path d="M21 21l-4.35-4.35"></path>
+                    </svg>
+                  </div>
+                </div>
+                <br>
+
+              <!-- search option end -->
+            </div>
+            <div class="single-blog-page">
+              <!-- recent start -->
+              <div class="left-blog">
+                <h4>ACTUALIDAD</h4>
+                <div class="recent-post">
+                  <!-- start single post -->
+                  <div class="recent-single-post">
+                    <div class="post-img">
+                      <a>
+                        <img src="https://cdn-3.expansion.mx/dims4/default/43d4e97/2147483647/strip/true/crop/3012x2000+0+0/resize/1200x797!/format/webp/quality/90/?url=https%3A%2F%2Fcherry-brightspot.s3.amazonaws.com%2Fad%2F17%2F86523d994f1fbf10169d09480439%2Fshutterstock-569931928.jpg" alt="">
+                      </a>
+                    </div>
+                    <div class="pst-content">
+                      <p><a> El precio de la Gasolina aumenta de manera exorbitante.</a></p>
+                    </div>
+                  </div>
+                  <!-- End single post -->
+                  <!-- start single post -->
+                  <div class="recent-single-post">
+                    <div class="post-img">
+                      <a>
+                        <img src="https://revistaaccionistas.repsol.com/sites/default/files/styles/header_articulo/public/2022-03/gasolinear_header.jpg?h=32ca0b14&itok=JFqugebd" alt="">
+                      </a>
+                    </div>
+                    <div class="pst-content">
+                      <p><a> Construcciones de nuevas Estaciones en zona 10.</a></p>
+                    </div>
+                  </div>
+                  <!-- End single post -->
+                  <!-- start single post -->
+                  <div class="recent-single-post">
+                    <div class="post-img">
+                      <a>
+                        <img src="https://www.diariomotor.com/imagenes/2022/03/gasolinera-repsol-rebaja-precios-noresizing-01-62417f51ee403.jpg" alt="">
+                      </a>
+                    </div>
+                    <div class="pst-content">
+                      <p><a> Incremento en el uso de derivados del petróleo.</a></p>
+                    </div>
+                  </div>
+                  <!-- End single post -->
+                  <!-- start single post -->
+                  <div class="recent-single-post">
+                    <div class="post-img">
+                      <a>
+                        <img src="https://revistabyte.es/wp-content/uploads/2016/10/App-Mi-Carrefour-Gasolineras-Carrefour-696x416.jpg" alt="">
+                      </a>
+                    </div>
+                    <div class="pst-content">
+                      <p><a> Nuevos Asociados populares, para Station Guide.</a></p>
+                    </div>
+                  </div>
+                  <!-- End single post -->
+                </div>
+              </div>
+              <!-- recent end -->
+            </div>
+            <div class="single-blog-page">
+              <div class="left-blog">
+                <h4>Temas</h4>
+                <ul>
+                  <li>
+                    <a>Energía</a>
+                  </li>
+                  <li>
+                    <a>Etanol</a>
+                  </li>
+                  <li>
+                    <a>Gasóleo</a>
+                  </li>
+                  <li>
+                    <a>Inflación</a>
+                  </li>
+                  <li>
+                    <a>Nafta</a>
+                  </li>
+                  <li>
+                    <a>Octanaje</a>
+                  </li>
+                  <li>
+                    <a>Petróleo</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="single-blog-page">
+              <div class="left-blog">
+                <h4>Desarrollo</h4>
+                <ul>
+                  <li>
+                    <a >Guatemala 2022 </a>
+                  </li>
+                  <li>
+                    <a>Progreso</a>
+                  </li>
+                  <li>
+                    <a>Diseños</a>
+                  </li>
+                  <li>
+                    <a >Administración</a>
+                  </li>
+                  <li>
+                    <a>Avances</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="single-blog-page">
+              <div class="left-tags blog-tags">
+                <div class="popular-tag left-side-tags left-blog">
+                  <h4>POPULARES</h4>
+                  <ul>
+                    <li>
+                      <a>Gasolina</a>
+                    </li>
+                    <li>
+                      <a>Servicios</a>
+                    </li>
+                    <li>
+                      <a>Recomendaciones</a>
+                    </li>
+                    <li>
+                      <a>Personal</a>
+                    </li>
+                    <li>
+                      <a>Estaciones</a>
+                    </li>
+                    <li>
+                      <a>Actualidad</a>
+                    </li>
+                    <li>
+                      <a>Inicios</a>
+                    </li>
+                    <li>
+                      <a>Equipo</a>
+                    </li>
+
+                  </ul>
+                </div>
+              </div>
+              <span>
+                <a *ngIf="_usuarioService.obtenerIdentidad().rol === 'ROL_ADMINISTRADOR'" class="ready-btn" routerLink="/Admin/Gasolineras">Regresar</a>
+              </span>
+              <span>
+                <a *ngIf="_usuarioService.obtenerIdentidad().rol === 'ROL_CLIENTE'" class="ready-btn" routerLink="/Usuario/Gasolineras">Regresar</a>
+              </span>
+            </div>
+          </div>
+        </div>
+        <!-- End left sidebar -->
+        <!-- Start single blog -->
+        <div class="col-md-8 col-sm-8 col-xs-12">
+          <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+              <!-- single-blog start -->
+              <article class="blog-post-wrapper">
+                <div class="post-thumbnail">
+                  <img src="https://surtigom.com.ar/wp-content/uploads/2020/02/slide1.jpg" alt="" />
+                </div>
+                <div class="post-information">
+                  <h2>Noticias y Recomendaciones</h2>
+                  <div class="entry-meta">
+                    <span class="author-meta"><i class="bi bi-person"></i><a> Station Guide</a></span>
+                    <span><i class="bi bi-clock"></i> Guatemala 2022</span>
+                    <span class="tag-meta">
+                      <i class="bi bi-folder"></i>
+                      <a>Planificaciones</a>
+                    </span>
+                    <span>
+                      <i class="bi bi-tags"></i>
+                      <a>Lo mejor de nosotros</a>
+                    </span>
+                    <span><i class="bi bi-chat"></i><a> Comentarios</a></span>
+                  </div>
+                  <div class="entry-content">
+                    <p>La inflación de Estados Unidos se disparó en mayo hasta su tasa más alta de los últimos 40 años, por lo cual, los subsidios a los combustibles están modificando la
+                      demanda de estos productos y la diferencia se cuentan en millones de galones, por lo cual los precios de los combustibles siguen altos, a pesar del subsidio y de la
+                      cotización del crudo en el exterior.</p>
+                    <blockquote>
+                      <p>Como consecuencia del aumento en los precios del petróleo en el mercado internacional, que superó los 120 dólares el barril este año, el precio de la gasolina en
+                        Estados Unidos subió, en promedio, 82.82% en lo que va del 2022.</p>
+                    </blockquote>
+                    <p>Cómo ha sido el espíritu de la normativa, desde un inicio, es el de brindar un apoyo económico a los guatemaltecos que son afectados por la continuidad de los efectos
+                      de la pandemia y ante el alza mundial del precio del petróleo a consecuencia de conflictos geopolíticos.</p>
+                  </div>
+                </div>
+              </article>
+              <div class="clear"></div>
+                <div class="comments-area">
+                  <div class="comments-heading">
+                    <h3>Reciente</h3>
+                  </div>
+                </div>
+                    <section class="services section-bg">
+                      <div class="container" style="flex-wrap: wrap;">
+                      <div class="row">
+                        <div class="card mb-3 text-center" style="max-height: 285px" *ngFor="let news of noticiasModelGet | buscarNew: buscarNew">
+                          <div class="row g-0">
+                            <div class="col-md-4">
+                              <img ngClass="imagen-card" src="https://www.xtrafondos.com/wallpapers/vertical/edificios-en-ciudad-9082.jpg" class="img-fluid rounded-start" alt="...">
+                            </div>
+                            <div class="col-md-8">
+                              <div class="card-body">
+                                <div class="section-title1">
+                                  <h4 class="card-title" style="text-align: center;">{{ news.titulo }}</h4>
+                                </div>
+                                <h6 class="card-title" style="text-align: center;"><i class="bi bi-calendar-event"></i> Guatemala, {{ news.fecha }}</h6>
+
+                                <p class="card-text" style="justify-self: start; margin-left: 5px;">
+                                  "{{ news.contenido }}".
+                                </p>
+
+                                <p class="card-text" style="text-align:center;">¡Cortesía de {{ news.editorial }}!</p>
+
+                                <button class="btn btn-primary" *ngIf="_usuarioService.obtenerIdentidad().rol === 'ROL_ADMINISTRADOR'" data-bs-toggle="modal"
+                                data-bs-target="#modalEditarNews" (click)="getNoticiasId(news._id)">
+                                  <i class="bi bi-pencil-square"></i>
+                                </button>
+                                <button class="btn btn-primary" *ngIf="_usuarioService.obtenerIdentidad().rol === 'ROL_ADMINISTRADOR'" (click)="deleteNoticias(news._id)">
+                                  <i class="bi bi-file-earmark-minus"></i>
+                                </button>
+
+                                <button class="btn btn-primary" *ngIf="_usuarioService.obtenerIdentidad().rol === 'ROL_CLIENTE'">
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-newspaper" viewBox="0 0 16 17">
+                                    <path d="M0 2.5A1.5 1.5 0 0 1 1.5 1h11A1.5 1.5 0 0 1 14 2.5v10.528c0 .3-.05.654-.238.972h.738a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 1 1 0v9a1.5 1.5 0 0 1-1.5 1.5H1.497A1.497 1.497 0 0 1 0 13.5v-11zM12 14c.37 0 .654-.211.853-.441.092-.106.147-.279.147-.531V2.5a.5.5 0 0 0-.5-.5h-11a.5.5 0 0 0-.5.5v11c0 .278.223.5.497.5H12z"/>
+                                    <path d="M2 3h10v2H2V3zm0 3h4v3H2V6zm0 4h4v1H2v-1zm0 2h4v1H2v-1zm5-6h2v1H7V6zm3 0h2v1h-2V6zM7 8h2v1H7V8zm3 0h2v1h-2V8zm-3 2h2v1H7v-1zm3 0h2v1h-2v-1zm-3 2h2v1H7v-1zm3 0h2v1h-2v-1z"/>
+                                  </svg>
+                                  Conocer más
+                                </button>
+
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    </section>
+
+              <!-- single-blog end -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div><!-- End Blog Page -->
+</section>
+
+<!--Modal Agregar News-->
+<div class="modal fade" id="modalAgregarNew" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header" style="background-color: #283a5ae6">
+        <h5 class="modal-title" id="exampleModalLabel" style="color: white">Agregar Noticia o Recomendación</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form #addForm="ngForm">
+
+          <div class="mb-3">
+            <label for="inputTitulo" class="form-label">Título</label>
+            <input placeholder="Encabezado" type="text" class="form-control" name="titulo" #titulo="ngModel" required
+            [(ngModel)]="noticiasModelPost.titulo">
+              <div [hidden]="titulo.valid || titulo.pristine"
+                class="alert alert-danger">Se requiere colocar el Título para continuar.
+              </div>
+          </div>
+
+          <div class="mb-3">
+            <label for="inputContenido" class="form-label">Contenido del Artículo</label>
+            <input placeholder="Contenido" type="text" class="form-control" name="contenido" #contenido="ngModel" required
+            [(ngModel)]="noticiasModelPost.contenido">
+              <div [hidden]="contenido.valid || contenido.pristine"
+                class="alert alert-danger">Se requiere colocar el Contenido del Artículo para continuar.
+              </div>
+          </div>
+
+          <div class="mb-3">
+            <label for="inputFecha" class="form-label">Fecha de Publicación</label>
+            <input placeholder="Fecha de Publicación" type="date" class="form-control" name="fecha" #fecha="ngModel" required
+            [(ngModel)]="noticiasModelPost.fecha">
+              <div [hidden]="fecha.valid || fecha.pristine"
+                class="alert alert-danger">Se requiere colocar la Fecha de Publicación para continuar.
+              </div>
+          </div>
+
+          <div class="mb-3">
+            <label for="inputEditorial" class="form-label">Editorial</label>
+            <input placeholder="Editorial de Guatemala" type="text" class="form-control" name="editorial" #editorial="ngModel" required
+            [(ngModel)]="noticiasModelPost.editorial">
+              <div [hidden]="editorial.valid || editorial.pristine"
+                class="alert alert-danger">Se requiere colocar la Editorial para continuar.
+              </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" (click)="postNoticias(addForm)" data-bs-dismiss="modal">Agregar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Modal Editar News-->
+<div class="modal fade" id="modalEditarNews" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header" style="background-color: #283a5ae6">
+        <h5 class="modal-title" id="exampleModalLabel" style="color: white">Editar Artículo</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form #addForm="ngForm">
+
+          <div class="mb-3">
+            <label for="inputtitulo" class="form-label">Título</label>
+            <input placeholder="Encabezado" type="text" class="form-control" name="titulo" #titulo="ngModel" required
+            [(ngModel)]="noticiasModelGetId.titulo">
+              <div [hidden]="titulo.valid || titulo.pristine"
+                class="alert alert-danger">Se requiere colocar el Título para continuar.
+              </div>
+          </div>
+
+          <div class="mb-3">
+            <label for="inputContenido" class="form-label">Contenido del Artículo</label>
+            <input placeholder="Contenido" type="text" class="form-control" name="contenido" #contenido="ngModel" required
+            [(ngModel)]="noticiasModelGetId.contenido">
+              <div [hidden]="contenido.valid || contenido.pristine"
+                class="alert alert-danger">Se requiere colocar el Contenido del Artículo para continuar.
+              </div>
+          </div>
+
+          <div class="mb-3">
+            <label for="inputFecha" class="form-label">Fecha de Publicación</label>
+            <input placeholder="Fecha de Publicación" type="date" class="form-control" name="fecha" #fecha="ngModel" required
+            [(ngModel)]="noticiasModelGetId.fecha">
+              <div [hidden]="fecha.valid || fecha.pristine"
+                class="alert alert-danger">Se requiere colocar la Fecha de Publicación para continuar.
+              </div>
+          </div>
+
+          <div class="mb-3">
+            <label for="inputEditorial" class="form-label">Editorial</label>
+            <input placeholder="Editorial de Guatemala" type="text" class="form-control" name="editorial" #editorial="ngModel" required
+            [(ngModel)]="noticiasModelGetId.editorial">
+              <div [hidden]="editorial.valid || editorial.pristine"
+                class="alert alert-danger">Se requiere colocar la Editorial para continuar.
+              </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" (click)="putNoticias()" data-bs-dismiss="modal">Editar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-footer></app-footer>
+</main>
+</body>
+</html>
+

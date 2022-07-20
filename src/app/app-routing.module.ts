@@ -9,6 +9,7 @@ import { PerfilClienteComponent } from './components/perfil-cliente/perfil-clien
 import { AdministracionUsuariosComponent } from './components/administracion-usuarios/administracion-usuarios.component';
 import { DashboardGasolinerasComponent } from './components/dashboard-gasolineras/dashboard-gasolineras.component';
 import { GasolinerasComponent } from './components/gasolineras/gasolineras.component';
+import { NoticiasComponent } from './components/noticias/noticias.component';
 
 import { UsuarioGuard } from './services/usuario.guard';
 import { AdministradorGuard } from './services/administrador.guard';
@@ -27,6 +28,8 @@ const routes: Routes = [
       {path: 'PerfilCliente', component: PerfilClienteComponent},
 
       {path: 'Gasolineras', component: GasolinerasComponent},
+
+      {path: 'Noticias', component: NoticiasComponent},
     ]
   },
   {
@@ -36,6 +39,8 @@ const routes: Routes = [
       {path: 'AdministracionUsuarios', component: AdministracionUsuariosComponent},
 
       {path: 'Gasolineras', component: GasolinerasComponent},
+
+      {path: 'Noticias', component: NoticiasComponent},
     ]
   },
   { path: "**", component: LoginComponent }

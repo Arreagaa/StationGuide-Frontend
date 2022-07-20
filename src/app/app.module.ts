@@ -19,9 +19,11 @@ import { ChartsModule } from '@rinminase/ng-charts';
 
 import { BuscarPipe } from './pipes/buscar.pipe';
 import { BuscarClientePipe } from './pipes/buscarCliente.pipe';
+import { BuscarNewPipe } from './pipes/buscarNew.pipe';
 import { FooterComponent } from './components/footer/footer.component';
 import { DashboardGasolinerasComponent } from './components/dashboard-gasolineras/dashboard-gasolineras.component';
 import { GasolinerasComponent } from './components/gasolineras/gasolineras.component';
+import { NoticiasComponent } from './components/noticias/noticias.component';
 
 
 @NgModule({
@@ -34,12 +36,14 @@ import { GasolinerasComponent } from './components/gasolineras/gasolineras.compo
     DashboardInicioComponent,
     BuscarPipe,
     BuscarClientePipe,
+    BuscarNewPipe,
 
     PerfilClienteComponent,
     FooterComponent,
     AdministracionUsuariosComponent,
     DashboardGasolinerasComponent,
     GasolinerasComponent,
+    NoticiasComponent,
   ],
   imports: [
     BrowserModule,

@@ -104,7 +104,15 @@
             </div>
           </div>
 
-          <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in" data-aos-delay="300">
+          <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in" data-aos-delay="300" *ngIf="_usuarioService.obtenerIdentidad().rol === 'ROL_ADMINISTRADOR'" routerLink="/Admin/Noticias">
+            <div class="icon-box">
+              <div class="icon"></div>
+              <h4><a>Noticias</a></h4>
+              <p>Novedoso apartado de Noticias, descubre los más importante sobre el mundo de la Gasolina, y recibe varias recomendaciones.</p>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in" data-aos-delay="300" *ngIf="_usuarioService.obtenerIdentidad().rol === 'ROL_CLIENTE'" routerLink="/Usuario/Noticias">
             <div class="icon-box">
               <div class="icon"></div>
               <h4><a>Noticias</a></h4>
