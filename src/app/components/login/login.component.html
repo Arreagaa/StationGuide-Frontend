@@ -1,19 +1,9 @@
-<br>
+<!--<br>
 <div class="espacio">
 
   <div class="container" id="container">
     <div class="form-container sign-up-container">
-      <form action="#">
-        <h1>Create Account</h1>
-        <div class="social-container">
-
-        </div>
-        <span>usa tu email para poder acceder</span>
-        <input type="text" placeholder="Name" />
-        <input type="email" placeholder="Email" />
-        <input type="password" placeholder="Password" />
-        <button>Inicio de Sesion</button>
-      </form>
+  
     </div>
     <div class="form-container sign-in-container">
       <form action="#">
@@ -50,10 +40,60 @@
         <div class="overlay-panel overlay-right">
           <h1>¡Bienvenido!</h1>
           <p>Ingresa tus credenciales correctamente para poder continuar</p>
-          <button type="button" class="ghost" routerLink="/Registro">Crear una Cuenta</button>
+          <button type="button" class="ghost" (click)="login()">Crear una Cuenta</button>
 
         </div>
       </div>
     </div>
   </div>
+</div>*-->
+
+<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+<br>
+<br>
+<div class="login">
+  <h2 class="active"> Login</h2>
+
+
+  <form>
+
+
+
+    <input type="text" class="text" placeholder="@gmail.com" name="username" #email="ngModel"
+     [(ngModel)]="usuarioModel.email" required>
+       <div [hidden]="email.valid || email.pristine"
+         class="alert alert-danger">Se requiere el Correo para Iniciar Sesión.</div>
+     <span>Usuario</span>
+     
+    <br>
+
+    <br>
+
+    <input type="password" class="text" placeholder="Password" name="password" #password="ngModel"
+    [(ngModel)]="usuarioModel.password" required>
+    <div [hidden]="password.valid || password.pristine"
+        class="alert alert-danger">No quites tu Clave de Acceso, la necesitas.
+      </div>
+    <span>Contraseña</span>
+    
+    <br>
+
+    <input type="checkbox" id="checkbox-1-1" class="custom-checkbox" />
+    <label for="checkbox-1-1">Keep me Signed in</label>
+
+    <button class="signin" (click)="login()">
+      Sign In
+    </button>
+
+
+    <hr>
+    <br>
+    <br>
+    <p>Deseas Crear una cuenta Nueva?</p>
+    <button type="button" class="signin" routerLink="/Registro">Crear una Cuenta</button>
+
+
+
+  </form>
+
 </div>
