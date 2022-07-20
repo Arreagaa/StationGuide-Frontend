@@ -1,1 +1,219 @@
-<p>estaciones works!</p>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+</head>
+
+<body>
+
+
+  <!-- ======= hero Section ======= -->
+  <section id="hero">
+    <div class="hero-container">
+      <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+
+        <ol id="hero-carousel-indicators" class="carousel-indicators"></ol>
+
+        <div class="carousel-inner" role="listbox">
+
+          <div class="carousel-item active" style="background-image: url(https://cdn.businessinsider.es/sites/navi.axelspringer.es/public/styles/2400/public/media/image/2019/11/gasolinera-moderna.jpg?itok=NK4ehLBM)">
+            <div class="carousel-container">
+              <div class="container">
+
+                <h2 class="animate__animated animate__fadeInDown">¡VISITA LAS ESTACIONES DE TU PREFERENCIA!</h2>
+                <p class="animate__animated animate__fadeInUp">ENCUENTRA LOS MEJORES PRECIOS </p>
+
+                <a class="btn-get-started scrollto animate__animated animate__fadeInUp" type="button"data-bs-toggle="modal" data-bs-target="#modalAgregarEstacion"
+                ><i class="bi bi-file-earmark-plus"></i> NUEVA ESTACIÓN</a>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section><!-- End Hero Section -->
+  <main id="main">
+
+    <!-- ======= Clients Section ======= -->
+   <section id="clients" class="clients section-bg">
+    <div class="container">
+
+      <div class="row" data-aos="zoom-in">
+
+        <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+          <img src="https://llyasa.com/wp-content/uploads/2017/03/logo-shell-trans2.png" class="img-fluid" alt="">
+        </div>
+
+        <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+          <img src="https://1000marcas.net/wp-content/uploads/2020/11/Texaco-Logo.png" class="img-fluid" alt="">
+        </div>
+
+        <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+          <img src="https://www.opem.com.ar/wp-content/uploads/2020/11/PUMA.png" class="img-fluid" alt="">
+        </div>
+
+        <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+          <img src="https://assets.website-files.com/58a26208fa80129641d66eff/60bfdc855bda40f30cef7df9_unologo.png" class="img-fluid" alt="">
+        </div>
+
+        <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+          <img src="https://serprogas.com.gt/wp-content/uploads/2020/05/Logo-fin-1024x214.png" class="img-fluid" alt="">
+        </div>
+
+        <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+          <img src="https://gasautoca.com/subidos_gasautoca-somosbla/2017/12/GasAuto_NewLogo-1borde-300x139.png" class="img-fluid" alt="">
+        </div>
+
+      </div>
+
+    </div>
+  </section><!-- End Cliens Section -->
+
+<!-- ======= Inicio de la Vista Cliente ======= -->
+<section id="services" class="services section-bg">
+  <div class="container" data-aos="fade-up">
+    <!-- ======= About Section ======= -->
+  <div id="about" class="about-area area-padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+          <div class="section-title">
+            <h2>GASOLINERA DE PREFERENCIA</h2>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <!-- single-well start-->
+        <div class="col-md-6 col-sm-6 col-xs-12">
+          <div class="well-left">
+            <div class="single-well">
+              <a>
+                <img src="https://i.pinimg.com/originals/79/17/ab/7917ab57de109633f1e49a51f9db99ea.jpg" alt="">
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- single-well end-->
+        <div class="col-md-6 col-sm-6 col-xs-12">
+          <div class="well-middle">
+            <div class="single-well">
+              <a>
+                <h4 class="sec-head">{{gasolineraModelGetId.nombreGas}}</h4>
+              </a>
+              <p>
+                Gasolineras de Calidad, central ubicada en {{gasolineraModelGetId.direccion}}, {{gasolineraModelGetId.departamento}}, a la espera de tu llegada, buscamos darte los mejores Servicios,
+                aprovecha y confía en nosotros, disponemos de excelente combustible.
+              <ul>
+                <li>
+                  <i class="bi bi-check"></i> Ambiente bien controlado y seguro
+                </li>
+                <li>
+                  <i class="bi bi-check"></i> Venta de Combustible y lubricantes
+                </li>
+                <li>
+                  <i class="bi bi-check"></i> Empresas distribuidoras confiables
+                </li>
+                <li>
+                  <i class="bi bi-check"></i> Servicio completo o de autoconsumo
+                </li>
+                <li>
+                  <i class="bi bi-check"></i> Espacios confortables e iluminados
+                </li>
+                <li>
+                  <i class="bi bi-check"></i> Empleados capacitados y preparados
+                </li>
+                <br>
+                <button type="button" class="btn btnStock"><i class="bi bi-bag-check"></i>  Precio Diesel</button>
+                <button type="button" class="btn btnStock"><i class="bi bi-bag-check"></i>  Precio Regular</button>
+                <button type="button" class="btn btnStock"><i class="bi bi-bag-check"></i>  Precio Súper</button>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- End col-->
+      </div>
+    </div>
+  </div><!-- End About Section -->
+  </div>
+</section><!-- End Services Section -->
+
+
+  <section class="services section-bg">
+    <div class="container">
+      <div class="input-group">
+        <div class="search-wrapper">
+          <input type="Buscar" class="search-input" type="text" placeholder="Buscar">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="25" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="feather feather-search" viewBox="0 0 24 24">
+            <defs></defs>
+            <circle cx="11" cy="11" r="8"></circle>
+            <path d="M21 21l-4.35-4.35"></path>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= Services Section ======= -->
+  <section id="services" class="services section-bg">
+    <div class="container">
+
+      <div class="section-title">
+        <h2 data-aos="fade-in">ESTACIONES</h2>
+        <br>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6 d-flex" data-aos="fade-right">
+          <div class="card">
+            <div class="card-img">
+              <img src="https://media.istockphoto.com/photos/modern-blue-service-station-picture-id171259711?k=20&m=171259711&s=612x612&w=0&h=l4AKr84nApirBingTkqbsUdOhvaui1CQathOi_eKjcE=" alt="...">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title"><a >Nuestro Propósito</a></h5>
+              <p class="card-text" style="text-align: justify;">
+                Dar a conocer a todos los usuarios los precios más accesibles según la cercanía de las gasolineras, es decir, todo dependerá de la ubicación del usuario y las
+                preferencias que posean.
+              </p>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section><!-- End Services Section -->
+
+<!-- ======= Cta Section ======= -->
+<section id="cta" class="cta" *ngIf="_usuarioService.obtenerIdentidad().rol === 'ROL_ADMINISTRADOR'" >
+  <div class="container" data-aos="zoom-in">
+
+    <div class="row">
+      <div class="col-lg-9 text-center text-lg-start">
+        <h3>Control de Gasolineras</h3>
+        <p>Siendo Administrador, puedes visualizar a todos las Gasolineras registrados dentro de la Aplicación, tener Control sobre ellas, lleva un orden y maneja las direcciones de la mejor manera
+          para que nuestros queridos Clientes pueden encontrar sus Gasolineras de Preferencia, y de igual manera, las Estaciones más cercanas.
+        </p>
+      </div>
+      <div class="col-lg-3 cta-btn-container text-center">
+        <a class="cta-btn align-middle" routerLink="/Admin/Gasolineras">Ver Gasolineras</a>
+      </div>
+    </div>
+
+  </div>
+</section><!-- End Cta Section -->
+
+<section id="services" class="services section-bg">
+
+
+</section><!-- End Services Section -->
+
+<app-footer></app-footer>
+</main>
+</body>
+</html>
+
+
