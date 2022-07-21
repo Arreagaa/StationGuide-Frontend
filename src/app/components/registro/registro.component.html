@@ -22,31 +22,31 @@
         <h1>Iniciar Sesión</h1>
         <p class="texto" style="text-align: center">Comienza con nosotros, ¡Empieza Ya!</p>
 
-        <label class="br">Nombre</label>
+        <label class="br" style="text-align: justify;">Nombre de Usuario</label>
         <input type="text" placeholder="Nombre" class="form-control" id="inputNombre" name="nombre" #nombre="ngModel"
           [(ngModel)]="usuarioModelPost.nombre" required />
         <div [hidden]="nombre.valid || nombre.pristine" class="alert alert-danger">Se requiere un Nombre
           para Registrarte.
         </div>
-        <label class="br">Direccion</label>
+        <label class="br">Dirección o Ubicación</label>
         <input type="text" placeholder="Dirección Concreta" class="form-control" id="inputDirección" name="dirección"
           #direccion="ngModel" [(ngModel)]="usuarioModelPost.direccion" required />
         <div [hidden]="direccion.valid || direccion.pristine" class="alert alert-danger">Se requiere su Direcciónpara
           continuar.
         </div>
-        <label class="br">Departamento</label>
+        <label class="br">Departamento de Guatemala</label>
         <input type="text" placeholder="Guatemala" class="form-control" id="inputDepartamento" name="departamento"
           #departamento="ngModel" [(ngModel)]="usuarioModelPost.departamento" required />
         <div [hidden]="departamento.valid || departamento.pristine" class="alert alert-danger">Se requiere su Ubicación
           para continuar.
         </div>
-        <label class="br">Correo</label>
+        <label class="br">Correo de Contacto</label>
         <input type="email" placeholder="@gmail.com" id="form3Example90" class="form-control" id="inputEmail"
           name="email" #email="ngModel" [(ngModel)]="usuarioModelPost.email" required />
         <div [hidden]="email.valid || email.pristine" class="alert alert-danger">Se requiere el Correo de
           Contacto para Registrarte.
         </div>
-        <label class="br">Contraseña</label>
+        <label class="br">Clave de Acceso</label>
         <input type="password" placeholder="Password" id="form3Example99" class="form-control " id="inputPassword"
           name="password" #password="ngModel" [(ngModel)]="usuarioModelPost.password" required />
         <div [hidden]="password.valid || password.pristine" class="alert alert-danger">No olvides tu Clave
@@ -56,9 +56,6 @@
           <button type="button" class="br1" (click)="postUsuarios()" routerLink="/Login">Registrar</button>
         </div>
         <br>
-        <div class="div2">
-          <button type="button" class="ghost text2" routerLink="/Inicio">Regresar</button>
-        </div>
 
       </form>
     </div>
@@ -66,8 +63,9 @@
       <div class="overlay">
 
         <div class="overlay-panel overlay-right">
-          <h1>¡Bienvenido!</h1>
-          <p>Llena todos los campos para poder registrarte con exito !!</p>
+          <h1 class="welcome">¡Bienvenido!</h1>
+          <p>¡Llena todos los campos para poder registrarte con exito!</p>
+          <button type="button" class="ghost" routerLink="/Login">Ya tengo una Cuenta</button>
 
         </div>
       </div>

@@ -18,6 +18,7 @@ body {
 h1 {
   font-weight: bold;
   margin: 0;
+  color: #6793F4;
 }
 
 h2 {
@@ -72,6 +73,7 @@ button.ghost {
 .form-control {
   width: 85%;
   border-radius: 5px;
+  padding-bottom: 8px;
 }
 
 .alert {
@@ -170,9 +172,9 @@ input {
 }
 
 .overlay {
-  background: #283a5ae6;
-  background: -webkit-linear-gradient(to right, #283a5ae6, #283a5ae6);
-  background: linear-gradient(to right, #283a5ae6, #283a5ae6);
+  background: #6793F4;
+  background: -webkit-linear-gradient(to right, #6793F4, #6793F4);
+  background: linear-gradient(to right, #6793F4, #6793F4);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 0 0;
@@ -239,10 +241,10 @@ input {
 .espacio {
   margin-top: 50px;
 }
+
 .br {
   font-size: 18px;
   text-emphasis: none;
-  text-align: left;
 }
 .br3 {
   margin-top: 10px;
@@ -270,6 +272,26 @@ input {
 }
 
 .br1 {
-  font-size: 20px;
+  background-color: #6793F4;
+  border-color: #6793F4;
+  font-size: 18px;
   margin-top: 40px;
+}
+
+.br1:hover {
+  background-color: #1EE16F;
+  border-color: #1EE16F;
+}
+
+.ghost{
+  background-color: #6793F4;
+}
+
+.ghost:hover{
+  background-color: white;
+  color: #6793F4;
+}
+
+.welcome{
+  color: #fff;
 }
