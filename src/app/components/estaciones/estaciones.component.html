@@ -25,8 +25,11 @@
                 <h2 class="animate__animated animate__fadeInDown">¡VISITA LAS ESTACIONES DE TU PREFERENCIA!</h2>
                 <p class="animate__animated animate__fadeInUp">ENCUENTRA LOS MEJORES PRECIOS </p>
 
-                <a class="btn-get-started scrollto animate__animated animate__fadeInUp" type="button"data-bs-toggle="modal" data-bs-target="#modalAgregarEstacion"
+                <a class="btn-get-started scrollto animate__animated animate__fadeInUp" type="button"data-bs-toggle="modal" data-bs-target="#modalAgregarEstacion" *ngIf="_usuarioService.obtenerIdentidad().rol === 'ROL_ADMINISTRADOR'"
                 ><i class="bi bi-file-earmark-plus"></i> NUEVA ESTACIÓN</a>
+
+                <a class="btn-get-started scrollto animate__animated animate__fadeInUp" type="button" *ngIf="_usuarioService.obtenerIdentidad().rol === 'ROL_CLIENTE'" routerLink="/Usuario/Gasolineras"
+                > REGRESAR</a>
 
               </div>
             </div>
@@ -128,9 +131,9 @@
                   <i class="bi bi-check"></i> Empleados capacitados y preparados
                 </li>
                 <br>
-                <button type="button" class="btn btnStock"><i class="bi bi-bag-check"></i>  Precio Diesel</button>
-                <button type="button" class="btn btnStock"><i class="bi bi-bag-check"></i>  Precio Regular</button>
-                <button type="button" class="btn btnStock"><i class="bi bi-bag-check"></i>  Precio Súper</button>
+                <button type="button" class="btn btnStock" (click)="getMejorPrecioDiesel()"><i class="bi bi-bag-check"></i>  Precio Diesel</button>
+                <button type="button" class="btn btnStock" (click)="getMejorPrecioRegular()"><i class="bi bi-bag-check"></i>  Precio Regular</button>
+                <button type="button" class="btn btnStock" (click)="getMejorPrecioSuper()"><i class="bi bi-bag-check"></i>  Precio Súper</button>
               </ul>
             </div>
           </div>
@@ -176,7 +179,7 @@
             <div class="card-body">
               <h5 class="card-title"><a> {{station.nombreSucursal}}</a></h5>
               <p class="card-text" style="text-align: justify;" *ngIf="station.market == true">
-                Ubicada en {{station.direccion}}, {{station.departamento}}.
+                Estación ubicada en {{station.direccion}}, {{station.departamento}}.
                 Se cuenta con Supermercado Disponible.
               </p>
 
@@ -195,6 +198,26 @@
 
               <p class="card-text" style="text-align: center;">
                 <i class="bi bi-check"></i> Precio Actual Gasolina Súper Q.{{station.SuperGas}}
+              </p>
+
+              <p class="card-text" style="text-align: center;">
+                <span>
+                  <a *ngIf="_usuarioService.obtenerIdentidad().rol === 'ROL_ADMINISTRADOR'" data-bs-toggle="modal" data-bs-target="#modalEditarEstacion" class="ready-btn" (click)="getEstacionesId(station._id)">
+                    <i class="bi bi-pencil-square"></i>
+                  </a>
+                </span>
+
+                <span>
+                  <a *ngIf="_usuarioService.obtenerIdentidad().rol === 'ROL_ADMINISTRADOR'" (click)="deleteEstaciones(station._id)" class="ready-btn">
+                    <i class="bi bi-file-earmark-minus"></i>
+                  </a>
+                </span>
+
+                <span>
+                  <a *ngIf="_usuarioService.obtenerIdentidad().rol === 'ROL_CLIENTE'" class="ready-btn">
+                    <i class="bi bi-geo-alt"></i>
+                  </a>
+                </span>
               </p>
 
             </div>
@@ -223,8 +246,90 @@
   </div>
 </section><!-- End Cta Section -->
 
+<!-- ======= Cta Section ======= -->
+<section id="cta" class="cta" *ngIf="_usuarioService.obtenerIdentidad().rol === 'ROL_CLIENTE'" >
+  <div class="container" data-aos="zoom-in">
+
+    <div class="row">
+      <div class="col-lg-9 text-center text-lg-start">
+        <h3>Gasolineras con Supermercado</h3>
+        <p>Sabemos que en varias ocasiones necesitas de algo, urgente, muchas Gasolineras cuentan con un Servicios de Supermercado, con el fin que pases a realizar tus compras de
+          manera eficaz y rápidamente, encuentra cuales poseen este Servicio.
+        </p>
+      </div>
+      <div class="col-lg-3 cta-btn-container text-center">
+        <a class="cta-btn align-middle">Ver Gasolineras</a>
+      </div>
+    </div>
+
+  </div>
+</section><!-- End Cta Section -->
+
 <section id="services" class="services section-bg">
 
+  <!-- ======= Recent Blog Posts Section ======= -->
+  <section id="recent-posts" class="recent-posts">
+    <div class="container" data-aos="fade-up">
+
+      <div class="section-title">
+        <h2 data-aos="fade-in">COMUNIDAD</h2>
+        <br>
+      </div>
+
+      <div class="row gy-5" style="text-align: justify;">
+
+        <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="post-box">
+            <div class="post-img"><img src="https://www.eluniverso.com/resizer/CZRy8qyLr7kFu2g2BxyL8q9wqWk=/arc-anglerfish-arc2-prod-eluniverso/public/HJT3YXMNFNAYFPUX3FE6U7EF5E.jpg" class="img-fluid" alt=""></div>
+            <div class="meta">
+              <span class="post-date">Abril 17</span>
+              <span class="post-author"> / Julia Parker</span>
+            </div>
+            <h3 class="post-title">Excelente y Destacable idea</h3>
+            <p>Sin duda una aplicación sencilla de usar, con un diseño minimalista, completamente funcional.</p>
+          </div>
+        </div>
+
+        <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="post-box">
+            <div class="post-img"><img src="https://www.eluniverso.com/resizer/J3tkwCVp2Ko78EgKxL55RlZLWA0=/996x670/smart/filters:quality(70)/cloudfront-us-east-1.images.arcpublishing.com/eluniverso/7J7I36VTSVAZFNC4BFNTYE37WQ.jpg" class="img-fluid" alt=""></div>
+            <div class="meta">
+              <span class="post-date">Junio 24</span>
+              <span class="post-author"> / Gerardo Arreaga</span>
+            </div>
+            <h3 class="post-title">Enfocada en Ayudar </h3>
+            <p>Una idea que realmente busca ayudar a las personas afectadas por el aumento en los Precios de la Gasolina.</p>
+          </div>
+        </div>
+
+        <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+          <div class="post-box">
+            <div class="post-img"><img src="https://st2.depositphotos.com/16122460/44386/i/600/depositphotos_443861810-stock-photo-empty-billboard-on-modern-gas.jpg" class="img-fluid" alt=""></div>
+            <div class="meta">
+              <span class="post-date">Junio 29</span>
+              <span class="post-author"> / Lisa Hunter</span>
+            </div>
+            <h3 class="post-title">Servicios de Calidad</h3>
+            <p>Servicios de primera, con una personal experimentado y amable, la aplicación presenta las mejores Estaciones de la zona.</p>
+          </div>
+        </div>
+
+        <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
+          <div class="post-box">
+            <div class="post-img"><img src="https://www.diariodeburgos.es/media/IMG/2022/5FA19D6A-9692-367F-0C0B68CEE932DB25.JPG" class="img-fluid" alt=""></div>
+            <div class="meta">
+              <span class="post-date">Julio 19</span>
+              <span class="post-author"> / Andres Rivas</span>
+            </div>
+            <h3 class="post-title">Practica y funcional</h3>
+            <p>Una aplicación sencilla, fácil de comprender, con buenos asociados en todo el país, presenta la información más relevante.</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section><!-- End Recent Blog Posts Section -->
 
 </section><!-- End Services Section -->
 
@@ -293,13 +398,96 @@
               </div>
           </div>
 
-          
-
         </form>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
         <button type="button" class="btn btn-primary" (click)="postEstaciones(addForm)" data-bs-dismiss="modal">Agregar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Modal Editar Estacion-->
+<div class="modal fade" id="modalEditarEstacion" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header" style="background-color: #283a5ae6">
+        <h5 class="modal-title" id="exampleModalLabel" style="color: white">Editar Estación</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form #addForm="ngForm">
+
+          <div class="mb-3">
+            <label for="inputNombreSucursal" class="form-label">Nombre de la Estación</label>
+            <input placeholder="Estación" type="text" class="form-control" name="nombreSucursal" #nombreSucursal="ngModel" required
+            [(ngModel)]="sucursalesModelGetId.nombreSucursal">
+              <div [hidden]="nombreSucursal.valid || nombreSucursal.pristine"
+                class="alert alert-danger">Se requiere colocar el Nombre para continuar.
+              </div>
+          </div>
+
+          <div class="mb-3">
+            <label for="inputDireccion" class="form-label">Dirección de la Estación</label>
+            <input placeholder="Dirección Concreta" type="text" class="form-control" name="direccion" #direccion="ngModel" required
+            [(ngModel)]="sucursalesModelGetId.direccion">
+              <div [hidden]="direccion.valid || direccion.pristine"
+                class="alert alert-danger">Se requiere colocar la Dirección para continuar.
+              </div>
+          </div>
+
+          <div class="mb-3">
+            <label for="inputDepartamento" class="form-label">Departamento de Guatemala</label>
+            <input placeholder="Departamento" type="text" class="form-control" name="departamento" #departamento="ngModel" required
+            [(ngModel)]="sucursalesModelGetId.departamento">
+              <div [hidden]="departamento.valid || departamento.pristine"
+                class="alert alert-danger">Se requiere colocar el Departamento para continuar.
+              </div>
+          </div>
+
+          <div class="mb-3">
+            <label for="inputDiesel" class="form-label">Precio Gasolina Diesel</label>
+            <input placeholder="Gasolina Diesel" type="number" class="form-control" name="diesel" #diesel="ngModel" required
+            [(ngModel)]="sucursalesModelGetId.diesel">
+              <div [hidden]="diesel.valid || diesel.pristine"
+                class="alert alert-danger">Se requiere colocar el Precio de la Gasolina Diesel para continuar.
+              </div>
+          </div>
+
+          <div class="mb-3">
+            <label for="inputRegular" class="form-label">Precio Gasolina Regular</label>
+            <input placeholder="Gasolina Regular" type="number" class="form-control" name="regular" #regular="ngModel" required
+            [(ngModel)]="sucursalesModelGetId.regular">
+              <div [hidden]="regular.valid || regular.pristine"
+                class="alert alert-danger">Se requiere colocar el Precio de la Gasolina Regular para continuar.
+              </div>
+          </div>
+
+          <div class="mb-3">
+            <label for="inputSuper" class="form-label">Precio Gasolina Súper</label>
+            <input placeholder="Gasolina Súper" type="text" class="form-control" name="SuperGas" #SuperGas="ngModel" required
+            [(ngModel)]="sucursalesModelGetId.SuperGas">
+              <div [hidden]="SuperGas.valid || SuperGas.pristine"
+                class="alert alert-danger">Se requiere colocar el Precio de la Gasolina Súper para continuar.
+              </div>
+          </div>
+
+          <div class="form-group">
+            <label for="SelectMarket">Disponibilidad de Supermercado </label>
+            <select id="market" style="width:100%; height: 2rem;" name="market" #market="ngModel"
+            [(ngModel)]="sucursalesModelGetId.market" required>
+            <option value="true">Disponible</option>
+            <option value="false">No Disponible</option>
+          </select>
+
+          </div>
+
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" (click)="putEstaciones()" data-bs-dismiss="modal">Editar</button>
       </div>
     </div>
   </div>
