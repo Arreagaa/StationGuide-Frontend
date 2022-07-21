@@ -1,3 +1,17 @@
+<!-- ======= Breadcrumbs Section ======= -->
+<section class="breadcrumbs">
+  <div class="container">
+
+    <div class="d-flex justify-content-between align-items-center">
+      <h2>Noticia o Recomendación</h2>
+      <ol>
+        <li><a class="bread" routerLink="/Usuario/Noticias" style="text-decoration: none; color:#37517e">Regresar <i class="bi bi-box-arrow-left"></i></a></li>
+      </ol>
+    </div>
+
+  </div>
+</section><!-- Breadcrumbs Section -->
+
 <!-- ======= Portfolio Details Section ======= -->
 <section id="portfolio-details" class="portfolio-details">
   <div class="container">
@@ -9,36 +23,57 @@
           <div class="swiper-wrapper align-items-center">
 
             <div class="swiper-slide">
-              <img src="assets/img/portfolio/portfolio-1.jpg" alt="">
-            </div>
+              <!--<img src="https://media.revistaad.es/photos/60c755b6c06a6d36cb1fbabc/master/w_1600%2Cc_limit/13962.jpg" alt="">-->
 
-            <div class="swiper-slide">
-              <img src="assets/img/portfolio/portfolio-2.jpg" alt="">
-            </div>
+              <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="https://www.diariodeburgos.es/media/IMG/2022/5FA19D6A-9692-367F-0C0B68CEE932DB25.JPG" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="https://www.prensalibre.com/wp-content/uploads/2018/12/3e0ecba8-eca9-4526-9f5b-63069594f84f.jpeg?quality=52&w=750&h=500&crop=1" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="https://images.adsttc.com/media/images/5da3/9ea3/3312/fd49/8d00/026f/slideshow/04.jpg?1571004058" class="d-block w-100" alt="...">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
 
-            <div class="swiper-slide">
-              <img src="assets/img/portfolio/portfolio-3.jpg" alt="">
             </div>
-
           </div>
-          <div class="swiper-pagination"></div>
         </div>
       </div>
 
       <div class="col-lg-4">
         <div class="portfolio-info">
-          <h3>Project information</h3>
+          <h3>Información importante</h3>
           <ul>
-            <li><strong>Category</strong>: Web design</li>
-            <li><strong>Client</strong>: ASU Company</li>
-            <li><strong>Project date</strong>: 01 March, 2020</li>
-            <li><strong>Project URL</strong>: <a href="#">www.example.com</a></li>
+            <li><strong>Artículo</strong>: {{noticiasModelGetId.titulo}}</li>
+            <li><strong>Editorial</strong>: {{noticiasModelGetId.editorial}}</li>
+            <li><strong>Publicación</strong>: {{noticiasModelGetId.fecha}}</li>
+            <li><strong>Relevante</strong>: <a href="https://www.prensalibre.com/tema/gasolina/" style="text-decoration: none; color:#6793F4" target="_blank">
+              Noticias, Prensa Libre
+            </a></li>
           </ul>
         </div>
         <div class="portfolio-description">
-          <h2>This is an example of portfolio detail</h2>
-          <p>
-            Autem ipsum nam porro corporis rerum. Quis eos dolorem eos itaque inventore commodi labore quia quia. Exercitationem repudiandae officiis neque suscipit non officia eaque itaque enim. Voluptatem officia accusantium nesciunt est omnis tempora consectetur dignissimos. Sequi nulla at esse enim cum deserunt eius.
+          <h2>{{noticiasModelGetId.titulo}} <i class="bi bi-receipt-cutoff"></i></h2>
+          <p style="text-align: justify;">
+           <i>"{{noticiasModelGetId.contenido}}".</i> Artículo bien presentado por {{noticiasModelGetId.editorial}}, se agradece el apoyo con el movimiento enfocado al apoyo gratuito para todos los
+           usuarios, desde Noticias de vital importancia sobre el mundo del Combustible y como esto afecta a los precios de la Gasolina en Guatemala.
           </p>
         </div>
       </div>
