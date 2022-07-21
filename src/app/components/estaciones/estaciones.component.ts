@@ -231,4 +231,18 @@ export class EstacionesComponent implements OnInit {
     )
   }
 
+  getGasolineraMarket(){
+    this._estacionesService.obtenerGasolineraMarket().subscribe(
+      (response) => {
+        this.sucursalesModelGet = response.sucursales;
+
+        console.log(response);
+        console.log(this.sucursalesModelGet);
+      },
+      (error)=>{
+        console.log(<any>error)
+      }
+    )
+  }
+
 }

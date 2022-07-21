@@ -59,4 +59,10 @@ export class EstacionesService {
     //let headersToken = this.headersVariable.set('Authorization', token);
     return this._http.get(this.url + '/obtenerSuper', {headers: this.headersVariable })
   }
+
+  //SUPERMARKET
+  obtenerGasolineraMarket(): Observable<any>{
+    //let headersToken = this.headersVariable.set('Authorization', token);
+    return this._http.get(this.url + '/ObtenerSuperMarket', {headers: this.headersVariable })
+  }
 }
