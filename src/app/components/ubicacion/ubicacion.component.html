@@ -1,1 +1,68 @@
-<p>ubicacion works!</p>
+<!-- ======= Breadcrumbs Section ======= -->
+<section class="breadcrumbs">
+  <div class="container">
+
+    <div class="d-flex justify-content-between align-items-center">
+      <h2>Ubicación de la Estación</h2>
+      <ol>
+        <li><a class="bread" [routerLink]="['/Usuario/Estaciones', sucursalesModelGetId.idGasolinera]" style="text-decoration: none; color:#37517e">Regresar <i class="bi bi-box-arrow-left"></i></a></li>
+      </ol>
+    </div>
+
+  </div>
+</section><!-- Breadcrumbs Section -->
+
+<!-- ======= Portfolio Details Section ======= -->
+<section id="portfolio-details" class="portfolio-details">
+  <div class="container">
+
+    <div class="row gy-4">
+
+      <div class="col-lg-8">
+        <div class="portfolio-details-slider swiper">
+          <div class="swiper-wrapper align-items-center">
+
+            <div class="swiper-slide">
+              <!--<img src="https://media.revistaad.es/photos/60c755b6c06a6d36cb1fbabc/master/w_1600%2Cc_limit/13962.jpg" alt="">-->
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3860.1268137739817!2d-90.48598778464793!3d14.648741979821141!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8589a28677f22b4b%3A0x8c8deefd0f0b0f4a!2zRXN0YWNpw7NuIFB1bWEg4oCiIFBvcnRhbGVz!5e0!3m2!1ses!2sgt!4v1658436651407!5m2!1ses!2sgt"
+               width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4">
+        <div class="portfolio-info">
+          <h3>Información de la Estación</h3>
+          <ul>
+            <li><strong>Nombre</strong>: {{sucursalesModelGetId.nombreSucursal}}</li>
+            <li><strong>Dirección</strong>: {{sucursalesModelGetId.direccion}}</li>
+            <li><strong>Departamento</strong>: {{sucursalesModelGetId.departamento}}</li>
+            <li><strong>Precio Gasolina Diesel</strong>: Q.{{sucursalesModelGetId.diesel}}</li>
+            <li><strong>Precio Gasolina Regular</strong>: Q.{{sucursalesModelGetId.regular}}</li>
+            <li><strong>Precio Gasolina Súper</strong>: Q.{{sucursalesModelGetId.SuperGas}}</li>
+          </ul>
+        </div>
+        <div class="portfolio-description">
+          <h2>{{sucursalesModelGetId.nombreSucursal}} <i class="bi bi-pin-map"></i></h2>
+          <p style="text-align: justify;" *ngIf="sucursalesModelGetId.market == true">
+            Estación que si cuenta con un Supermercado Disponible. Dirígete al mapa, en este podrás adjuntar la dirección exacta que se te proporciona, o bien, la dirección ya estará
+            colocada en el mismo, para que sea posible presionar el botón que dice “Como llegar”, y puedas dirigirte a la estación por la mejor ruta.
+          </p>
+
+          <p style="text-align: justify;" *ngIf="sucursalesModelGetId.market != true">
+            Estación que no cuenta con Supermercado Disponible, o es inexistente. Dirígete al mapa, en este podrás adjuntar la dirección exacta que se te proporciona, o bien, la
+            dirección ya estará colocada en el mismo, para que sea posible presionar el botón que dice “Como llegar”, y puedas dirigirte a la estación por la mejor ruta.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section><!-- End Portfolio Details Section -->
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+<app-footer></app-footer>
+
