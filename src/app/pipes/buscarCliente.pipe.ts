@@ -5,13 +5,12 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class BuscarClientePipe implements PipeTransform {
 
-  transform(reservaciones:any, buscar:any) {
+  transform(sucursales:any, buscar:any) {
     if(buscar == undefined){
-      return reservaciones;
+      return sucursales;
     }else{
-      return reservaciones.filter(reservaciones =>{
-        return reservaciones.idUsuario.toLowerCase().includes(buscar.toLowerCase()) || reservaciones.fechaInicio.toLowerCase().includes(buscar.toLowerCase()) /*||
-        reservaciones.totalNoches.toLowerCase().includes(buscar.toLowerCase())*/
+      return sucursales.filter(sucursales =>{
+        return sucursales.direccion.toLowerCase().includes(buscar.toLowerCase()) || sucursales.departamento.toLowerCase().includes(buscar.toLowerCase())
       })
     }
   }

@@ -22,6 +22,7 @@ export class EstacionesComponent implements OnInit {
 
   public token;
   public idGasolinera;
+  public buscarCliente;
 
   //DATOS DE LA GASOLINERA
   public gasolineraModelGetId: Gasolineras;
