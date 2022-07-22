@@ -5,6 +5,8 @@ import { ActivatedRoute } from '@angular/router';
 import { Sucursales } from 'src/app/models/sucursales.model';
 import { EstacionesService } from 'src/app/services/estaciones.service';
 
+import {GeolocationService} from '@ng-web-apis/geolocation';
+
 import Swal from 'sweetalert2'
 
 @Component({
@@ -17,11 +19,13 @@ export class UbicacionComponent implements OnInit {
 
   public token;
   public idSucursal;
+  public geolocation;
 
   //Sucursales
   public sucursalesModelGetId: Sucursales;
 
-  constructor(public _usuarioService: UsuarioService, public _estacionesService: EstacionesService, public _activatedRoute: ActivatedRoute) {
+  constructor(public _usuarioService: UsuarioService, public _estacionesService: EstacionesService, public _activatedRoute: ActivatedRoute,
+    public readonly geolocation$: GeolocationService) {
     this.sucursalesModelGetId = new Sucursales('','', '','',0,0,0,true,'');
     this.token = this._usuarioService.obtenerToken();
    }
@@ -48,4 +52,16 @@ export class UbicacionComponent implements OnInit {
     )
   }
 
+  getPosition() {
+    this.geolocation$.subscribe(position =>
+     doSomethingWithPosition(position));
 }
+
+  //geolocation$.pipe(take(1)).subscribe(position => doSomethingWithPosition(position));
+  //geolocation$.subscribe(position => doSomethingWithPosition(position));
+
+}
+function doSomethingWithPosition(position: any) {
+  throw new Error('Function not implemented.');
+}
+

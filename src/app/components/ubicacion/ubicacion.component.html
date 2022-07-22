@@ -41,6 +41,8 @@
             <li><strong>Precio Gasolina Diesel</strong>: Q.{{sucursalesModelGetId.diesel}}</li>
             <li><strong>Precio Gasolina Regular</strong>: Q.{{sucursalesModelGetId.regular}}</li>
             <li><strong>Precio Gasolina Súper</strong>: Q.{{sucursalesModelGetId.SuperGas}}</li>
+            <li *ngIf="geolocation$ | async as position"><strong>Tú Ubicación</strong>:
+              <span>{{position.coords.latitude}}</span></li>
           </ul>
         </div>
         <div class="portfolio-description">
