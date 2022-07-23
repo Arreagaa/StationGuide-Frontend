@@ -7,7 +7,7 @@ import { Gasolineras } from '../models/gasolineras.model';
   providedIn: 'root'
 })
 export class GasolinerasService {
-  public url: String = 'http://localhost:8080/api';
+  public url: String = 'https://station-guide.herokuapp.com/api';
   public headersVariable = new HttpHeaders().set('Content-Type','application/json');
 
   constructor(public _http: HttpClient) { }

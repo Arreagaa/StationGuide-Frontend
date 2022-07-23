@@ -7,7 +7,7 @@ import { Sucursales } from '../models/sucursales.model';
   providedIn: 'root'
 })
 export class EstacionesService {
-  public url: String = 'http://localhost:8080/api';
+  public url: String = 'https://station-guide.herokuapp.com/api';
   public headersVariable = new HttpHeaders().set('Content-Type','application/json');
 
   constructor(public _http: HttpClient) { }

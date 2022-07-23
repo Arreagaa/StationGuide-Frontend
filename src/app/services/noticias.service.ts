@@ -7,7 +7,7 @@ import { Noticias } from '../models/noticias.model';
   providedIn: 'root'
 })
 export class NoticiasService {
-  public url: String = 'http://localhost:8080/api';
+  public url: String = 'https://station-guide.herokuapp.com/api';
   public headersVariable = new HttpHeaders().set('Content-Type','application/json');
 
   constructor(public _http: HttpClient) { }
