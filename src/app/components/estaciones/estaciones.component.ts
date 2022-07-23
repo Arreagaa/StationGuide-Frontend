@@ -116,7 +116,8 @@ export class EstacionesComponent implements OnInit {
           icon: 'success',
           title: 'Se ha agregado la Estación Correctamente',
           text: '¡Puedes Revisar el cambio!',
-          footer: '<a>Puedes verificar la nueva Estación.</a>'
+          footer: '<a>Puedes verificar la nueva Estación.</a>',
+          confirmButtonColor: '#6793F4',
         })
       },
       (error)=>{
@@ -125,7 +126,8 @@ export class EstacionesComponent implements OnInit {
           icon: 'warning',
           title: 'Algo no anda bien...',
           text: '¡Revisa que la información este correcta!',
-          footer: '<a>No dejes campos vacios, ¡gracias!</a>'
+          footer: '<a>No dejes campos vacios, ¡gracias!</a>',
+          confirmButtonColor: '#6793F4',
         })
       }
     )
@@ -140,7 +142,8 @@ export class EstacionesComponent implements OnInit {
           icon: 'warning',
           title: 'Se han realizado cambios en la Estación',
           text: '¡Puedes Revisar la Estación Actualizada!',
-          footer: '<a>Función concretada correctamente.</a>'
+          footer: '<a>Función concretada correctamente.</a>',
+          confirmButtonColor: '#6793F4',
         })
       },
       (error)=>{
@@ -149,7 +152,8 @@ export class EstacionesComponent implements OnInit {
           icon: 'warning',
           title: 'Algo no anda bien...',
           text: '¡Revisa que la información este correcta!',
-          footer: 'No dejes campos vacios, ¡gracias!'
+          footer: 'No dejes campos vacios, ¡gracias!',
+          confirmButtonColor: '#6793F4',
         })
       }
     )
